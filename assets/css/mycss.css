@@ -1,0 +1,18 @@
+/*
+    import 방법
+    <link href="/assets/css/mycss.css" rel="stylesheet">
+*/
+/*main---------------------------------------------------*/
+
+
+
+
+
+/*admin---------------------------------------------------*/
+/*add, edit form textarea 넓이 크게*/
+.fill-form-Box { width: -webkit-fill-available !important;}
+
+/*모바일에서 어드민 버튼 보이게*/
+.my-d-sm-inline-block {
+    display: inline-block!important;
+}
