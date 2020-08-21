@@ -147,7 +147,7 @@
 						</tr>
 						<tr>
 							<th>비밀번호 <span style="color: red; ">*</span></th>
-							<td><input type="password" name="pwd" value=""  maxlength="20" placeholder="8~20자리, 영문, 숫자만 가능합니다."/></td>
+							<td><input type="password" name="pwd" value=""  maxlength="20" placeholder="8~20자리, 영문+숫자만 가능합니다."/></td>
 							<td></td>
 						</tr>
 						<tr class="last-tr">
