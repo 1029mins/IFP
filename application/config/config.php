@@ -386,7 +386,7 @@ $config['sess_table_name']        = 'ci_sessions'; /* session을 저장할 DB Ta
 $config['sess_match_ip']        = FALSE; /* session 정보 가져올 시 IP일치 확인 사용 여부 */
 $config['sess_match_useragent']    = TRUE;
 $config['sess_time_to_update']    = 300; /* session ID 갱신 주기 -> 세션 하이잰킹 방지 */
-
+$config['session_save_path']    =NULL;
 /*
 |--------------------------------------------------------------------------
 | Cookie Related Variables
