@@ -1,51 +1,78 @@
+<br>
 <!-- Banner -->
-		<section id="banner">
-		<!-- <img src="/assets/site_image/ifp_banner.png" alt="" weight="760px" height="260px"/> -->
-			<header>
-			<p>git test!!</p>
-				<h2>INFORMATION&nbsp; FOWARD&nbsp; PAGE</h2>
-				<p>Induk Univ. &nbsp;Inforsec Club</p>
-			</header>
-		</section>
-
-	<!-- Intro -->
-		<section id="intro" class="container">
-			<div class="row">
-				<div class="col-4 col-12-medium">
-					<section class="first">
-						<i class="icon solid featured fa-cog"></i>
-						<header>
-							<h2>Project</h2>
-						</header>
-						<p>창업대전, 공모전 등 프로젝트 제작 경험</p>
-					</section>
-				</div>
-				<div class="col-4 col-12-medium">
-					<section class="middle">
-						<i class="icon solid featured alt fa-bolt"></i>
-						<header>
-							<h2>People</h2>
-						</header>
-						<p>다양한 분야로 진출한 IFP 회원</p>
-					</section>
-				</div>
-				<div class="col-4 col-12-medium">
-					<section class="last">
-						<i href="gallery" class="icon solid featured alt2 fa-star"></i>
-						<header>
-							<h2><a href="gallery">Activity</a></h2>
-						</header>
-						<p>자체 세미나, 자격증 취득 등<br>
-						   다양한 활동 진행</p>
-					</section>
-				</div>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<section id="banner" style="margin: 0 0 0 0;">
+					<header>
+						<h2>INFORMATION&nbsp; FOWARD&nbsp; PAGE</h2>
+						<p>Induk Univ. &nbsp;Inforsec Club</p>
+					</header>
+				</section>
 			</div>
-			<footer>
-				<ul class="actions">
-					<li><a href="/sign_on" class="button large">Join us</a></li>
-				</ul>
-			</footer>
-		</section>
+			<div class="item">
+				<img src="/assets/site_image/pic02.jpg" alt="...">
+			</div>
+			<div class="item">
+				<img src="/assets/site_image/pic03.jpg" alt="...">
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+<!-- Intro -->
+	<section id="intro" class="container">
+		<div class="row">
+			<div class="col-4 col-12-medium">
+				<section class="first">
+					<i class="icon solid featured fa-cog"></i>
+					<header>
+						<h2>Project</h2>
+					</header>
+					<p>창업대전, 공모전 등 프로젝트 제작 경험</p>
+				</section>
+			</div>
+			<div class="col-4 col-12-medium">
+				<section class="middle">
+					<i class="icon solid featured alt fa-bolt"></i>
+					<header>
+						<h2>People</h2>
+					</header>
+					<p>다양한 분야로 진출한 IFP 회원</p>
+				</section>
+			</div>
+			<div class="col-4 col-12-medium">
+				<section class="last">
+					<i href="gallery" class="icon solid featured alt2 fa-star"></i>
+					<header>
+						<h2><a href="gallery">Activity</a></h2>
+					</header>
+					<p>자체 세미나, 자격증 취득 등<br>
+						다양한 활동 진행</p>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<ul class="actions">
+				<li><a href="/sign_on" class="button large">Join us</a></li>
+			</ul>
+		</footer>
+	</section>
 
 </section>
 
