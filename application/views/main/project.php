@@ -26,7 +26,7 @@
 				<section id="main">
 					<div class="container">
 						<div class="subHead">
-							<h2><span>프로젝트</span></h2>
+							<h2><span>프로젝트 test</span></h2>
 						</div>
 
 				<!--검색
