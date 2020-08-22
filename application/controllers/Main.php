@@ -20,7 +20,8 @@ class Main extends CI_Controller {
     public function lists()
     {
         $data['menu'] = 'none';
-        $data["list"] = $this->main_m->getlist();
+        $data["list_notice"] = $this->main_m->getlist_notice();
+        $data["list_project"] = $this->main_m->getlist_project();
         $this->load->view("main/main_header",$data);
         $this->load->view("main/main",$data);
         $this->load->view("main/main_footer");
