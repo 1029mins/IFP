@@ -15,7 +15,7 @@
 	}
 
 	.box{
-		height: 600px !important;
+		height: 100% !important;
 	}
 </style>
 
@@ -26,7 +26,7 @@
 				<section id="main">
 					<div class="container">
 						<div class="subHead">
-							<h2><span>프로젝트 test</span></h2>
+							<h2><span>프로젝트</span></h2>
 						</div>
 
 				<!--검색
@@ -39,8 +39,8 @@
 						</button>
 					  </div>
 					</div>
-				  </form>
-				-->
+				  </form>-->
+				
 	<?
       $tmp = $text1 ? "/text1/$text1/page/$page" : "/page/$page";
 	?>
@@ -63,17 +63,18 @@
 				$tmp = $text1 ? "/text1/$text1/page/$page" : "/page/$page";
 		?>
 			<div class="col-4 col-6-medium col-12-small">
-				<section class="box">
+				<section class="box" style="height: 100% ">
 					<?
 						if ($row->pic) {	//이미지 O
-							echo("<a href='#' class='image featured'><img src='/images/project/$row->pic' alt='' /></a>");
+							echo("<a href='/project/view/no/$no' class='image featured'><img src='/images/project/$row->pic' alt='' /></a>");
 						}
 						else {				//이미지X
-							echo("<a href='#' class='image featured'><img src='/assets/site_image/pic02.jpg' alt='대체이미지' /></a>");
+							echo("<a href='/project/view/no/$no' class='image featured'><img src='/assets/site_image/pic02.jpg' alt='대체이미지' /></a>");
 						}
 					?>
 					<header>
-						<h4><?=$row->title; ?></h4>
+						<h4><?=$row->title?></h4>
+						
 					</header>
 					<table border="1px">
 						<tr>
@@ -87,14 +88,27 @@
 						</tr>
 						<tr>
 							<th>내  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;용</th>
-							<td><?=$row->contents; ?></td>
+							<td>
+							<? if (strlen($row->contents)>25)
+								{
+									echo(mb_substr($row->contents, 0, 20, 'utf-8').'. . .');
+								}
+								else
+								{
+									echo(mb_substr($row->contents, 0, 24, 'utf-8'));
+								}
+							?></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td>
+							<!--Detail 버튼
+								<ul class="actions" align="right">
+								<li><a href="/project/view/no/?=$no;?" class="button xsmall">Detail</a></li>
+							</ul>-->
+							</td>
 						</tr>
 					</table>
-					<footer>
-						<ul class="actions" align="right">
-							<li><a href="/project/view/no/<?=$no;?>" class="button xsmall">Detail</a></li>
-						</ul>
-					</footer>
 				</section>
 			</div>
 		<?

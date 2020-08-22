@@ -81,7 +81,6 @@ class Project extends CI_Controller {
 
             if ($_POST)
          {
-
             $data=array( 
                 'mamber_no' => "4",
                 'kind_no' => "1",
@@ -93,6 +92,7 @@ class Project extends CI_Controller {
                 'pic' => " "
                );
 
+               
             //$picname = $this->call_upload();
             //    if($picname) $data["pic"] = $picname;
             
