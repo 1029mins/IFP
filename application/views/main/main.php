@@ -2,7 +2,6 @@
 		<section id="banner">
 		<!-- <img src="/assets/site_image/ifp_banner.png" alt="" weight="760px" height="260px"/> -->
 			<header>
-				<p>test</p>
 				<h2>INFORMATION&nbsp; FOWARD&nbsp; PAGE</h2>
 				<p>Induk Univ. &nbsp;Inforsec Club</p>
 			</header>
