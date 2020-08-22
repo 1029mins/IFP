@@ -2,7 +2,7 @@
 		<section id="banner">
 		<!-- <img src="/assets/site_image/ifp_banner.png" alt="" weight="760px" height="260px"/> -->
 			<header>
-
+				<p>test</p>
 				<h2>INFORMATION&nbsp; FOWARD&nbsp; PAGE</h2>
 				<p>Induk Univ. &nbsp;Inforsec Club</p>
 			</header>
@@ -67,9 +67,9 @@
 				<div class="row">
 					<!--공지-->
 <?
-	foreach ($list as $row)
+	foreach ($list_notice as $row)
 	{
-		$no=$row->no;
+		$no_notice=$row->no;
 ?>
 				<div class="col-6 col-6-small">
 					<a href="#" style="text-decoration: none;">
@@ -104,21 +104,36 @@
 				<section class="project">
 					<div class="row">
 						<!--프로젝트-->
+<?
+	foreach ($list_project as $row1)
+	{
+		$no_project=$row1->no;
+?>
+						
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box" style="padding-bottom:1em !important;">
-								<a href="#" class="image featured"><img src="/assets/site_image/pic02.jpg" alt="" /></a>
-
-								<h4>밥먹자 앱 개발</h4>
-
+								<a href="/project/view/no/<?=$no_project;?>" class="image featured">
+								<?
+									if ($row1->pic) {	//이미지 O
+										echo("<img src='/images/project/$row1->pic' style='display:block;height:233px;' alt='' />");
+									}
+									else {				//이미지X
+										echo("<img src='/assets/site_image/pic02.jpg' alt='대체이미지' />");
+									}
+								?>						
+								</a>
+								<h4><?=$row1->title;?></h4>
 								<ul class="actions" align="right">
-								<li><a href="#" class="button xsmall">Detail</a></li>
+								<li><a href="/project/view/no/<?=$no_project;?>" class="button xsmall">Detail</a></li>
 								</ul>
 							</section>
 						</div>
+<?
+	}
+?>						
 					</section>
 			</section>
 			</div>
-
 	</div>
 </div>
 </section>
