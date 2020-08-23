@@ -41,5 +41,12 @@
         {
             return $this->db->insert("project",$data);
         }
+
+        //프로젝트 수정
+        function updaterow( $row, $no )
+        {
+            $where=array( "no"=>$no );
+            return $this->db->update( "project", $row, $where );
+        }
     }
 ?>

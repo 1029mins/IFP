@@ -70,7 +70,7 @@ class Project extends CI_Controller {
              
              
 		}
-
+    //프로젝트 추가(수정중임)
     public function add()
         {
             //$data["list"] = $this->project_m->getlist();
@@ -102,5 +102,63 @@ class Project extends CI_Controller {
             redirect("/html/project/lists");    //   목록화면으로 이동.
             }
         }
+    
+        
+    //project 수정
+    public function edit()
+		{
+            $uri_array=$this->uri->uri_to_assoc(3);
+            $no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
+            $text1 = array_key_exists("text1",$uri_array) ? urldecode($uri_array["text1"]) : "" ;
+            $page = array_key_exists("page",$uri_array) ? urldecode($uri_array["page"]) : "" ;
+
+
+            $data["text1"]=$text1;
+            $data["page"]=$page;
+            $data["menu"] ='project';
+
+
+            $data["row"] = $this->project_m->getrow($no);
+
+			$this->load->library("form_validation");
+			//$this->form_validation->set_rules("name","이름","required|max_length[20]");
+			//$this->form_validation->set_rules("genre_no","장르번호","required|max_length[20]");
+
+			if ( $this->form_validation->run()==FALSE )     // 수정버튼 클릭한 경우
+			{
+				$data["row"]=$this->project_m->getrow($no);
+                $data["menu"] ='project';
+                $this->load->view("main/main_header",$data);
+                $this->load->view("main/project_edit",$data);
+                $this->load->view("main/main_footer"); 
+			}
+			else
+			{		
+
+				$data=array( 
+					'name' => $this->input->post("name", true),
+					'genre_no' => $this->input->post("genre_no", true),
+					'director' => $this->input->post("director", true),
+					'actor' =>  $this->input->post("actor", true),
+					'rating_no' => $this->input->post("rating_no", true), 
+					'add_audience' => $this->input->post("add_audience", true),
+					'release_date' => $this->input->post("release_date", true),
+					'running_time' => $this->input->post("running_time", true),
+					'poster' => $this->input->post("poster", true),
+					'summary' => $this->input->post("summary", true),
+					'trailer' => $this->input->post("trailer", true)
+					);
+				$poster = $this->call_upload();
+         if($poster) $data["poster"] = $poster;
+
+				 $trailer = $this->call_upload2();
+         if($trailer) $data["trailer"] = $trailer;
+
+         $result = $this->project_m->updaterow($data, $no);
+       
+         redirect("/html/project/lists" . $text1 . $page); 
+      
+			}
+		}
 }
 ?>
