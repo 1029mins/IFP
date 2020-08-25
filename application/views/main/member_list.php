@@ -28,7 +28,7 @@
 							if($rowExe->pic) $picPath = '/images/member/' . $rowExe->pic;  // 이미지가 있는 경우
 							else  $picPath = '/assets/site_image/pic05.jpg'; // 이미지가 없는 경우
 					?>
-							<a href="#" class="image featured imfgPoint"><img style="width:180px; height:240px;" src="<?=$picPath;?>" alt="" />
+							<a href="#" class="image featured imgPoint"><img style="width:180px; height:240px;" src="<?=$picPath;?>" alt="" />
 								<br><b><?=$rowExe->name;?> / <?=$rowExe->position_rank;?></b>
 							</a>
 					<?	}
@@ -37,13 +37,13 @@
 
 						<div style="text-align: center;">
 							<ul class="actions" >
-								<form name="form2" method="post">
+								<form name="form2" action="/member" method="post">
 									<input type="hidden" name="sort1" value="history">
-									<li><input type="submit" class="button" value="History"></li>
+									<li><input type="submit" class="button button_small" value="History"></li>
 								</form><br>
-								<form name="form3" method="post">
+								<form name="form3" action="/member" method="post">
 									<input type="hidden" name="sort1" value="">
-									<li><input type="submit" class="button" value="ALL"></li>
+									<li><input type="submit" class="button button_small" value="ALL"></li>
 								</form>
 							</ul>
 						</div>
@@ -104,7 +104,7 @@
 
 						</ul>
 
-						<div class="pagination" style="justify-content: center;">
+						<div class="pagination" style="justify-content: center; display: table; margin: 0 auto;">
 						  <?=$pagination;?>
 						</div>
 
@@ -143,7 +143,7 @@
 	}
 	.image.featured {
 		display: inline-block !important;
-		width: 43.3% !important;
+		width: 49.4% !important;
 	}
 	.imgPoint {
 		/*pointer-events: none;*/
@@ -165,9 +165,10 @@
 		h2 {font-size: 1.1em !important;}
 	}
 	@media screen and (min-width: 736px) {
-		.button {width: 200px;}
+		.button_small {width: 300px !important;}
 	}
-	.button {
-		height: 30px;
+	.button_small {
+		height: 40px !important;
+		font-size: 1.2em !important;
 	}
 </style>
