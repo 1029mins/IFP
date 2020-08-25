@@ -129,7 +129,7 @@
 	<div id="page-wrapper">
 		<!-- Header -->
 	<section id="header">
-	<div style="width:100%; height:50px; text-align:right; padding: 5px 10px 5px ;">
+	<div style="width:100%; height:50px; text-align:right; padding: 5px 10px 5prkqwk ;">
 
 		<!-- login 조건 -->
 		<?

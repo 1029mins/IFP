@@ -87,6 +87,6 @@ class __TwigTemplate_cbe904f8cf86a0a821a077dde4a75f23b90dc6607bfb54f1d9428deb692
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_length.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_length.twig");
+        return new Source("", "columns_definitions/column_length.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_length.twig");
     }
 }

@@ -63,6 +63,6 @@ class __TwigTemplate_d349598cff764445fc220e8571a8334ac0527417225388718f02cf46be0
 
     public function getSourceContext()
     {
-        return new Source("", "database/structure/search_table.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\database\\structure\\search_table.twig");
+        return new Source("", "database/structure/search_table.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\database\\structure\\search_table.twig");
     }
 }

@@ -65,6 +65,6 @@ class __TwigTemplate_9ad6de3687e350f62c139c5122017d49e060818bf19c4ca285e60f15eb9
 
     public function getSourceContext()
     {
-        return new Source("", "database/structure/browse_table_label.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\database\\structure\\browse_table_label.twig");
+        return new Source("", "database/structure/browse_table_label.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\database\\structure\\browse_table_label.twig");
     }
 }

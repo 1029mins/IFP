@@ -89,6 +89,6 @@ class __TwigTemplate_565a5838a8ce530ee0f06b08f42a79c6500a9a5dfc045fca7c363f262e3
 
     public function getSourceContext()
     {
-        return new Source("", "console/toolbar.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\console\\toolbar.twig");
+        return new Source("", "console/toolbar.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\console\\toolbar.twig");
     }
 }

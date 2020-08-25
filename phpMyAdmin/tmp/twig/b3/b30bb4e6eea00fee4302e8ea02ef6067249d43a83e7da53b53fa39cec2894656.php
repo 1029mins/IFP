@@ -72,6 +72,6 @@ class __TwigTemplate_3bdf983d7f798dc67ab99083ad64347e9c341c7da0b2b74ba0d06aeb9ba
 
     public function getSourceContext()
     {
-        return new Source("", "database/structure/print_view_data_dictionary_link.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\database\\structure\\print_view_data_dictionary_link.twig");
+        return new Source("", "database/structure/print_view_data_dictionary_link.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\database\\structure\\print_view_data_dictionary_link.twig");
     }
 }

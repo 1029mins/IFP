@@ -82,6 +82,6 @@ class __TwigTemplate_f9fbd7e7d9873203a9215dac168944984c47d005e56412627f4ae5fb95a
 
     public function getSourceContext()
     {
-        return new Source("", "select_all.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\select_all.twig");
+        return new Source("", "select_all.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\select_all.twig");
     }
 }

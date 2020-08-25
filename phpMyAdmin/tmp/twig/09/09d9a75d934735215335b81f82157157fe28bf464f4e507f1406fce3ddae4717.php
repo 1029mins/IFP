@@ -51,6 +51,6 @@ class __TwigTemplate_de7dc807470fe72b02d35fe0cc76b6a1f2a6e6650f314640e72ef67d935
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/form_bottom.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\config\\form_display\\form_bottom.twig");
+        return new Source("", "config/form_display/form_bottom.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\config\\form_display\\form_bottom.twig");
     }
 }

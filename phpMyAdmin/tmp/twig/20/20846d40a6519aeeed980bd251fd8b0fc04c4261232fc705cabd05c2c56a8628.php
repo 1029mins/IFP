@@ -91,6 +91,6 @@ class __TwigTemplate_35ece8d2fea60dc389e541f311910e773c3216e1fca9c6464c707b181b4
 
     public function getSourceContext()
     {
-        return new Source("", "privileges/delete_user_fieldset.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\privileges\\delete_user_fieldset.twig");
+        return new Source("", "privileges/delete_user_fieldset.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\privileges\\delete_user_fieldset.twig");
     }
 }

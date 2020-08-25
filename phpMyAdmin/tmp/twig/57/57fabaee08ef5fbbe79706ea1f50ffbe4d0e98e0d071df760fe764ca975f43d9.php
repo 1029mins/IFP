@@ -81,6 +81,6 @@ class __TwigTemplate_d57a4079bd271b7aa3ec913fe8dd4137a6089f99dc2a60fe684f5606804
 
     public function getSourceContext()
     {
-        return new Source("", "privileges/add_user_fieldset.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\privileges\\add_user_fieldset.twig");
+        return new Source("", "privileges/add_user_fieldset.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\privileges\\add_user_fieldset.twig");
     }
 }
