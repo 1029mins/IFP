@@ -2453,6 +2453,9 @@ input, select, textarea {
 			#copyright {
 				margin: 0;
 			}
+			
+		/* 메인 main carousel size */
+			.carousel-inner img {height: 1452px; min-width: 100%;}
 
 	}
 
@@ -2912,6 +2915,10 @@ input, select, textarea {
 				padding: 40px 0 20px 0;
 			}
 
+		/* 메인 main carousel size */
+			.carousel-inner img {max-height: 283px; min-width: 100%;}
+
+
 	}
 
 	/*추가 시작 */
@@ -3184,5 +3191,11 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 		opacity: .5 !important;
 	}
 /* main login modal 끝 */
+
+/* 메인 main carousel size */
+.carousel-inner img {max-height: 323px; min-width: 100%;}
+@media screen and (max-width: 407px) { 
+	.carousel-inner img {max-height: 316px; min-width: 100%;}
+}
 
 /*추가 끝*/

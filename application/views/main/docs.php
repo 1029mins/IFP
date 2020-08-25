@@ -44,7 +44,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<div class="subHead"><h2><span>자료실</span></h2></div>
+				<div class="subHead"><h2><span><b>자료실</b></span></h2></div>
 				<br>
 		<div class = "col-3" align="right">
         </div><br>
