@@ -33,7 +33,7 @@ class Login extends CI_Controller {
                 'pwd' => $this -> input -> post('pwd', TRUE)
             );
 			
-			$data['pwd'] = hash("sha256",$data['pwd']); //해시 암호화
+			//$data['pwd'] = hash("sha256",$data['pwd']); //해시 암호화
 			$result = $this -> login_m -> login($data);
 			$rank = $result -> rank; 
 
