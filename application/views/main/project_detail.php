@@ -15,8 +15,6 @@
             <!-- Sidebar -->
             <section class="box">
 
-            	<header>
-            	</header>
 				<ul class="divided">
 				<li><h3>&nbsp;작성자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></li>
 				<li><?=$row->member_name?></li>
@@ -58,11 +56,12 @@
 					</p>
 					<p style="text-align: center;"><a href="#"><?=$row->url?></a></p>
                 </article>
-				
-				<ul class="actions" align="right">
-					<li><a href="/project/edit/no/<?=$no?>" class="button xsmall">수정</a></li>
-					<li><a href="/project/delete/no/<?=$no?>" class="button xsmall">삭제</a></li>
-				</ul>
+
+				<div style="text-align:right;">
+					<a href="/project/edit/no/<?=$no?>"><button class="button alt" type="button">수정</button></a>
+					<a href="/project/delete/no/<?=$no?>" onclick="return confirm('삭제할까요?');"><button class="button alt" type="button">삭제</button></a>
+				</div>
+			
             </div>
 
 		</div>

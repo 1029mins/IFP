@@ -50,10 +50,8 @@
 <!--portfolio-->
 	<section>
 		<div class="row">
-		<div class="col-12">
-		<ul class="actions" align="right">
-							<li><a href="/project/add" class="button xsmall">글쓰기</a></li>
-						</ul>
+		<div class="col-12" style="text-align:right;">
+			<a href="/project/add"><button class="button alt" type="button">글쓰기</button></a>
 		</div>
 		<?
 			foreach ($list as $row)

@@ -17,7 +17,7 @@
 </style>
 </section>
 
-<!-- Main -->
+<!--Main -->
 <section id="main">
 
 	<div class="container">
@@ -59,6 +59,7 @@
 					<label for="date" class="col-sm-2 control-label">프로젝트기간</label>
 					<div class="col-sm-10">
 					  <input type="text" style="float:left; width:100%;" name="date" value="<?=$row->date?>" placeholder="프로젝트 기간">
+					  &nbsp;YY-MM-DD ~ YY-MM-DD 형식으로 입력하세요.
 					</div>
 				  </div>
 
@@ -66,7 +67,6 @@
 					<label for="member" class="col-sm-2 control-label">작성자</label>
 					<div class="col-sm-10">
 					  <input type="text" class="form-control"style="float:left; width:100%;" name="member"  placeholder="<?=$row->member_name?>" disabled>
-					  &nbsp;00-00-00 ~ 00-00-00 형식으로 입력하세요.
 					</div>
 				  </div>
 
@@ -98,13 +98,15 @@
 					</div>
 				  </div>
 
-				  <div align="center">
-                        <input type="submit" value="수정하기" class="button alt">
-						<a href="/project/detail/no/<?=$row->no?>"><input type="button" value="이전으로" class="button alt"></a>
-				  </div>
-
 				</form>
 				</section>
+
+				<footer>
+					<div style="text-align:right;">
+				  		<a href="/project/view/no/<?=$row->no?>"><button class="button alt" type="button">이전으로</button></a>
+						<a href="/project/edit/no/<?=$row->no?>"><button class="button alt" type="button">수정</button></a>
+				  	</div>
+				</footer>
 			</section>
 		</div>
 	</div>

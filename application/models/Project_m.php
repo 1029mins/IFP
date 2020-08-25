@@ -48,5 +48,10 @@
             $where=array( "no"=>$no );
             return $this->db->update( "project", $row, $where );
         }
+        //프로젝트 삭제
+        function deleterow($no)  {
+            $sql="delete from project where no=$no";
+            return  $this->db->query($sql);
+        }
     }
 ?>

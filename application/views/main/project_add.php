@@ -59,7 +59,8 @@
 				  <div class="form-group">
 					<label for="date" class="col-sm-2 control-label">프로젝트기간</label>
 					<div class="col-sm-10">
-					  <input type="date" style="float:left; width:100%;" id="date" placeholder="프로젝트 기간">
+					  <input type="text" style="float:left; width:100%;" id="date" placeholder="프로젝트 기간">
+					  &nbsp;YY-MM-DD ~ YY-MM-DD 형식으로 입력하세요.
 					</div>
 				  </div>
 
