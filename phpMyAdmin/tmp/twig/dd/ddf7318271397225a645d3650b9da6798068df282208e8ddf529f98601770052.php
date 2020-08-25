@@ -73,6 +73,6 @@ class __TwigTemplate_ff0a29869ab3074d9579cbf3085b36410d821930b443f455ff8ff7378d2
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_auto_increment.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_auto_increment.twig");
+        return new Source("", "columns_definitions/column_auto_increment.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_auto_increment.twig");
     }
 }

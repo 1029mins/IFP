@@ -60,6 +60,6 @@ class __TwigTemplate_d7e735c80c529649055ca4cf8d7df18bb5c26f23146cc18d70e2860ce2c
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/empty_display.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\display\\results\\empty_display.twig");
+        return new Source("", "display/results/empty_display.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\display\\results\\empty_display.twig");
     }
 }

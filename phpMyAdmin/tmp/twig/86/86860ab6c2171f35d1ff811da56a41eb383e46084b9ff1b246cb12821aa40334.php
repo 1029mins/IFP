@@ -124,6 +124,6 @@ class __TwigTemplate_e61fc71205b7bc8fe6779e9bdee45bdf00848398f2ddadac7f16b0e1c9f
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_indexes.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_indexes.twig");
+        return new Source("", "columns_definitions/column_indexes.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_indexes.twig");
     }
 }

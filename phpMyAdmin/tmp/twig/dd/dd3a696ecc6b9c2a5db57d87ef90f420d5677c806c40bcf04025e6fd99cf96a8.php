@@ -64,6 +64,6 @@ class __TwigTemplate_e46805957677726bbbf202424522baf33f78268273d963219a63592e3bd
 
     public function getSourceContext()
     {
-        return new Source("", "fk_checkbox.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\fk_checkbox.twig");
+        return new Source("", "fk_checkbox.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\fk_checkbox.twig");
     }
 }

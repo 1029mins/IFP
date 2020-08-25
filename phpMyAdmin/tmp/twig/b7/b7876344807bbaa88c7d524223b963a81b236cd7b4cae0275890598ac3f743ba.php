@@ -72,6 +72,6 @@ class __TwigTemplate_4b8c66289544efad8ce5b89922e5dd08c722003aeeef8459e9067b3dfe5
 
     public function getSourceContext()
     {
-        return new Source("", "filter.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\filter.twig");
+        return new Source("", "filter.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\filter.twig");
     }
 }
