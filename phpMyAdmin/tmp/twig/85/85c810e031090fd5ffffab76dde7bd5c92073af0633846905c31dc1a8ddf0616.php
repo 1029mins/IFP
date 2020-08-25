@@ -96,6 +96,6 @@ class __TwigTemplate_8d005e1feac61013dc1c2e1a7bfc68f0de4a33eb565e86e841cfac1e4d8
 
     public function getSourceContext()
     {
-        return new Source("", "database/create_table.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\database\\create_table.twig");
+        return new Source("", "database/create_table.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\database\\create_table.twig");
     }
 }

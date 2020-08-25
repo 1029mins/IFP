@@ -127,6 +127,6 @@ class __TwigTemplate_cd35caa62736c31e0e221a30951c320758c64cf32978ba722f2f468d78d
 
     public function getSourceContext()
     {
-        return new Source("", "select_lang.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\select_lang.twig");
+        return new Source("", "select_lang.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\select_lang.twig");
     }
 }

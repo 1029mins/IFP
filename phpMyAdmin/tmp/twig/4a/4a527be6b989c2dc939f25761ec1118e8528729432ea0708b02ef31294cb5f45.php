@@ -291,6 +291,6 @@ class __TwigTemplate_c93b9c39d0a666fe723ad1cbe7bf07ebe08227a62eb284a05efaaf6a49c
 
     public function getSourceContext()
     {
-        return new Source("", "database/structure/body_for_table_summary.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\database\\structure\\body_for_table_summary.twig");
+        return new Source("", "database/structure/body_for_table_summary.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\database\\structure\\body_for_table_summary.twig");
     }
 }

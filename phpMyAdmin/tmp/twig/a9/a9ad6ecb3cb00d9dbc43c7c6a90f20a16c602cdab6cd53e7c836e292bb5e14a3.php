@@ -74,6 +74,6 @@ class __TwigTemplate_2691a7664052cbda5dbcb958105b0a931645cfad09b82995062aa10077f
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_null.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_null.twig");
+        return new Source("", "columns_definitions/column_null.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_null.twig");
     }
 }

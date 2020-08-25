@@ -132,6 +132,6 @@ class __TwigTemplate_24e57038a1333a173fb6c0d5b34a4b916823364f8f1a84d953f38c3b30a
 
     public function getSourceContext()
     {
-        return new Source("", "list/item.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\list\\item.twig");
+        return new Source("", "list/item.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\list\\item.twig");
     }
 }

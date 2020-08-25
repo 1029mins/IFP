@@ -75,6 +75,6 @@ class __TwigTemplate_d6ee4a372236ff88f25f23d505d75608db5eb84df41534d48e2484dc87d
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_comment.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_comment.twig");
+        return new Source("", "columns_definitions/column_comment.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_comment.twig");
     }
 }

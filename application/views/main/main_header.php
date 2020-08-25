@@ -74,25 +74,6 @@
 			form1.action="/project/lists/text1/" + form1.text1.value +"/page";
 		form1.submit();
 	}
-
-	//메뉴 활성화 색상변환
-	var colorPath = window.location.pathname;
-	if (colorPath.includes("professor_intro")){
-		window.onload = function () {
-			$('.aboutUs').toggleClass('current');
-		}
-	}else if (colorPath.includes("history")){
-		window.onload = function () {
-			$('.aboutUs').toggleClass('current');
-		}
-	}
-	if (colorPath.includes("gallery")){
-		window.onload = function () {
-			$('.aboutUs').toggleClass('current');
-		}
-	}
-
-
 </script>
 
 <style>
@@ -148,12 +129,13 @@
 	<div id="page-wrapper">
 		<!-- Header -->
 	<section id="header">
-	<div style="width:100%; height:50px; text-align:right; padding: 5px 10px 5px ;">
+	<div style="width:100%; height:50px; text-align:right; padding: 5px 10px 5prkqwk ;">
 
 		<!-- login 조건 -->
 		<?
 			if ( $this -> session -> userdata('logged_in') == TRUE) {
 				echo $this -> session -> userdata('username');?> 님 환영합니다.
+				<a href="/mypage" class="button small">Mypage</a>
 				<a href="/login/logout" class="button small">Logout</a>
 		<?
 			} else {
@@ -168,7 +150,7 @@
 
 		<?
 
-			 if($menu == 'aboutUs2' ){
+			 if($menu == 'aboutUs' ){
 		?>
 				<script>
 					window.onload = function () {

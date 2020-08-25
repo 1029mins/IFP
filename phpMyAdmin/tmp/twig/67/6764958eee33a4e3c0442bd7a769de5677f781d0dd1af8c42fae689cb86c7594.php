@@ -78,6 +78,6 @@ class __TwigTemplate_4f36cb6c259e571ed67cf2bc87a9ef07a85cbf00b8cee649dd91dc8921b
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_type.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_type.twig");
+        return new Source("", "columns_definitions/column_type.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_type.twig");
     }
 }
