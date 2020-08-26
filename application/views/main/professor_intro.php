@@ -1,29 +1,28 @@
 </section> 
 
 <!-- Main -->
-<section id="main">
+<section class="mobile" id="main">
 	<div class="container">
 		
 		<div class="subHead">
 		<h2><span>교수님 소개</span></h2>
 		</div>
-
+		
 		<div class="row">
-			<div class="col-4 col-12-medium">
-
+			<div class="col-4 col-12-medium" align="center">
+				<br><br>
 				<section class="box" style="background: transparent !important; border-bottom: none !important;">
-					<a href="#" class="image featured" style="pointer-events: none;"><img src="/assets/site_image/professor_Ko.jpeg" alt="" /></a>
-				
+					<a href="#" class="image featured" style="pointer-events: none;"><img class="mobile" src="/assets/site_image/professor_Ko.jpeg" alt="" /></a>
 				</section>
 
 			</div>
-			<div class="col-8 col-12-medium imp-medium">
+			<div class="col-8 col-12-medium">
 
 				<!-- Content -->
 					<article class="box post">
 					<section>
 						<header>
-							<h3 style="text-align:center; color:#054c68;">인사말</h3>
+							<h3 class="mobile" style="text-align:center; color:#054c68;">인사말</h3>
 						</header>
 					</section>
 						
@@ -51,13 +50,13 @@
 							다할 것이며, 우리 모두 서로 배려하며 졸업 후에도 서로가 서로에게 도움이 되는 동아리가 되도록 하자구요.
 						</p>
  
-						<h4 align ="right">I.F.P 지도교수 고수정</h4>
+						<h4 class="mobile" align ="right">I.F.P 지도교수 고수정</h4>
 
 						<br><hr width="auto"><br>
 						
 						<section>
 							<header>
-								<h3 style="text-align:center; color:#054c68;">소개</h3>
+								<h3 class= "mobile" style="text-align:center; color:#054c68;">소개</h3>
 							</header>
 						</section>
 	
@@ -109,3 +108,17 @@
 	</div>
 </section>
 
+<style>
+	@media screen and (max-width: 736px){
+		h3.mobile{
+			font-size: 20px !important;
+		}
+		h4.mobile{
+			font-size: 15px !important;
+		}
+		img.mobile{
+			align:center !important;
+			max-width: 300px !important;
+		}
+	}
+</style>
