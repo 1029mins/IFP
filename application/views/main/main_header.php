@@ -26,36 +26,6 @@
    <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script> <!-- jquery 버전 추가 -->
 
    <script>
-   /* 1.11.3 version 필요, 드롭다운 메뉴 선택시 필요 */
-   /*
-      $(function(){
-         var btn=$("ul > li");
-             btn.click(function(){ // btn에 속해있는 "a" 클릭 했을 때 실행되는 함수
-               btn.removeAttr('btn','current'); // 먼저 클릭 됐던 btn속에 active 클래스 삭제
-               $(this).attr('btn','current');// 새로 클릭한 a에 active 클래스를 넣음
-
-               alert("a parents class = "+$(this).attr('id','current')+", a class = " + $(".a_open").hasClass("current"));
-         })
-      })
-*/
-/*
-      $(function(){
-         var btn = $("ul > li"); // ul 자식 li 선택
-         btn.find("a").click(function(event){ // btn에 속해있는 "a" 클릭 했을 때 실행되는 함수
-            btn.removeClass("current"); // 먼저 클릭 됐던 btn속에 active 클래스 삭제
-            $(this).parents().addClass("current"); // 새로 클릭한 a에 active 클래스를 넣음
-            //alert($(this).parents().hasClass("current"));
-         });
-      });
-*/
-   /*
-   $(function(){
-      $('li').click(function(){
-         $('li').removeClass()
-            $(this).addClass('current')
-      })
-   });
-*/
 
    <?//회원가입 성공 메시지 ?>
     <? if( !empty($this->session->flashdata('message')) ){
