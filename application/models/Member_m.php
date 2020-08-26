@@ -23,10 +23,10 @@
 
 
         //전체 레코드 개수
-        public function rowcount($text1,$sort1)
+        public function rowcount($text1,$sort1,$regdate_year)
 		{
-			if ($text1)
-                $sql="select * from member where name like '%$text1%'";
+			if ($regdate_year)
+                $sql="select * from member where yearN like '%$regdate_year%'";
             elseif ($sort1=="history"){
                 $sql="select * from member where position_rank like '%회장%'";
             }

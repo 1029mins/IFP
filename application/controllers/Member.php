@@ -35,7 +35,14 @@ class Member extends CI_Controller {
         $config["per_page"]	 = 5;								// 페이지당 표시할 line 수
 
 
-        $config["total_rows"] = $this->member_m->rowcount($text1,$sort1);		// 전체 레코드개수 구하기
+        $data["regdate_year"] = $this->input->post("regdate_year",true);
+
+        if ($data["regdate_year"]){
+            $regdate_year = $data["regdate_year"];
+        }
+        else $regdate_year = date("Y");
+        
+        $config["total_rows"] = $this->member_m->rowcount($text1,$sort1,$regdate_year);		// 전체 레코드개수 구하기
         $config["uri_segment"] = $page_segment;					// 페이지가 있는 segment 위치
         $config["base_url"]	 = $base_url;						// 기본 URL
         $this->pagination->initialize($config);					// pagination 설정 적용
@@ -50,11 +57,8 @@ class Member extends CI_Controller {
         $data["menu"] ='member';
         $data["yearlist"] = $this->member_m->getlist_year();
         
-        $data["regdate_year"] = $this->input->post("regdate_year",true);
-        if ($data["regdate_year"]){
-            $regdate_year = $data["regdate_year"];
-        }
-        else $regdate_year = date("Y");
+        
+       
         
         $data["list"] = $this->member_m->getlist($text1, $start, $limit, $sort1,$regdate_year);
         
