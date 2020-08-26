@@ -44,11 +44,35 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<div class="subHead"><h2><span><b>자료실</b></span></h2></div>
+				<div class="subHead"><h2><span>자료실</span></h2></div>
 				<br>
-		<div class = "col-3" align="right">
-        </div><br>
-<!-- docs -->
+<script>
+    //검색
+	function find_text()
+	{
+		if (!form1.text1.value)
+			form1.action="/docs/lists/page";
+		else
+			form1.action="/docs/lists/text1/" + form1.text1.value +"/page";
+		form1.submit();
+	}
+
+</script>
+				<div class="row" align="right">
+				<!-- 검색 -->
+				<form method="post" name="form1" action='docs.php' width="40%">					
+					<div>
+					<input type="text" size="100" name="text1" value="<?=$text1; ?>" onKeydown="if (event.keyCode == 13) {find_text();}" placeholder="제목검색" aria-label="Search" aria-describedby="basic-addon2">
+						<div>
+						<button class="btn btn-primary" type="button" onClick="find_text();">
+						<i class="fas fa-search fa-sm"></i>
+						</button>
+						</div>
+						</div>
+				</form>
+				</div>
+               <br>
+		<!---- docs ----->
 <section>
 	<div class="row">
 		<table align = "center">
@@ -85,7 +109,7 @@
 			</div>
 			</tbody>
         </table>
-	<div class="pagination" style="justify-content: center;"><?=$pagination;?></div>
+	<div class="pagination" style="justify-content: center;" align="center"><?=$pagination;?></div>
  </div>
 </section>
 <!--------------------  docs  ---------------------------->
