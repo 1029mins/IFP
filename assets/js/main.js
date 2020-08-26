@@ -62,16 +62,3 @@
 				});
 
 })(jQuery);
-
-/* 추가한  jquery */
-
-/* 드롭다운 메뉴 클릭시 색 변경
-$(function(){
-			var btn = $("ul > li"); // ul 자식 li 선택
-			btn.find("a").click(function(){ // btn에 속해있는 "a" 클릭 했을 때 실행되는 함수
-				btn.removeClass("current"); // 먼저 클릭 됐던 btn속에 active 클래스 삭제
-				$this.parent().parent().parent().addClass("current"); // 새로 클릭한 a에 active 클래스를 넣음
-			)}
-		)}
-
-		*/

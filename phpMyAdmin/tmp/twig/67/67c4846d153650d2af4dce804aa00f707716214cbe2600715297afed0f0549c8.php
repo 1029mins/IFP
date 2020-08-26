@@ -95,6 +95,6 @@ class __TwigTemplate_8c8d1a598c7ed6b2f5532fa783ae2bc0903ae6721764f6cc5f99d101c88
 
     public function getSourceContext()
     {
-        return new Source("", "console/query_action.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\console\\query_action.twig");
+        return new Source("", "console/query_action.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\console\\query_action.twig");
     }
 }

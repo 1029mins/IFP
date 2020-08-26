@@ -79,6 +79,6 @@ class __TwigTemplate_8ee973f310645f155fc8aae804bf5f0ed5dfa88c6a422e58e4f2797db8e
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/comment_for_row.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\display\\results\\comment_for_row.twig");
+        return new Source("", "display/results/comment_for_row.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\display\\results\\comment_for_row.twig");
     }
 }

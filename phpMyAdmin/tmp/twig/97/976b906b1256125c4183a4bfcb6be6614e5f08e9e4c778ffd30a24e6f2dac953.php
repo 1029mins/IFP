@@ -169,6 +169,6 @@ class __TwigTemplate_4cbd6c8ec2a6f54939c5600a2760c8cac2fb61c76517dfe74fecd016de8
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/options_block.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\display\\results\\options_block.twig");
+        return new Source("", "display/results/options_block.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\display\\results\\options_block.twig");
     }
 }

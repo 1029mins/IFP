@@ -68,6 +68,6 @@ class __TwigTemplate_f8da6efcac0938db8bf300d478ee86648597732328561597102228bdedd
 
     public function getSourceContext()
     {
-        return new Source("", "database/structure/empty_table.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\database\\structure\\empty_table.twig");
+        return new Source("", "database/structure/empty_table.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\database\\structure\\empty_table.twig");
     }
 }

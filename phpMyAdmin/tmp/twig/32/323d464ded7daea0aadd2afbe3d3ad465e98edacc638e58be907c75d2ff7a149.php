@@ -407,6 +407,6 @@ class __TwigTemplate_209e5e05ce7f459db924cee20a2146285d6181788878cc0c44fba73a0ce
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_attributes.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_attributes.twig");
+        return new Source("", "columns_definitions/column_attributes.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_attributes.twig");
     }
 }

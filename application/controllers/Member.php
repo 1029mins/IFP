@@ -32,7 +32,7 @@ class Member extends CI_Controller {
             $base_url = "/member/lists/text1/$text1/page";
         $page_segment = substr_count( substr($base_url,0,strpos($base_url,"page")) , "/" )+1;
         //$base_url = "/~sale26" . $base_url;
-        $config["per_page"]	 = 10;								// 페이지당 표시할 line 수
+        $config["per_page"]	 = 5;								// 페이지당 표시할 line 수
 
 
         $config["total_rows"] = $this->member_m->rowcount($text1,$sort1);		// 전체 레코드개수 구하기
@@ -45,11 +45,19 @@ class Member extends CI_Controller {
         $limit=$config["per_page"];								// 페이지 당 라인수
         $data["text1"]=$text1;                                  // text1 값 전달을 위한 처리
 
-        $data["list"] = $this->member_m->getlist($text1, $start, $limit, $sort1);
         $data["listExecutive"] = $this->member_m->getlistExecutive();
 		
-		$data["menu"] ='member';
-
+        $data["menu"] ='member';
+        $data["yearlist"] = $this->member_m->getlist_year();
+        
+        $data["regdate_year"] = $this->input->post("regdate_year",true);
+        if ($data["regdate_year"]){
+            $regdate_year = $data["regdate_year"];
+        }
+        else $regdate_year = date("Y");
+        
+        $data["list"] = $this->member_m->getlist($text1, $start, $limit, $sort1,$regdate_year);
+        
         $this->load->view("main/main_header",$data);
         $this->load->view("main/member_list",$data);
         $this->load->view("main/main_footer");

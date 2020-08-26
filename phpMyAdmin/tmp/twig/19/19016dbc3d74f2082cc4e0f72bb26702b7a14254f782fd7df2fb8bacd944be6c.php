@@ -68,6 +68,6 @@ class __TwigTemplate_c8cdf6935a5c571bb15746250d225b03fd309f1b72ba2396a154d99bb4a
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/group_header.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\config\\form_display\\group_header.twig");
+        return new Source("", "config/form_display/group_header.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\config\\form_display\\group_header.twig");
     }
 }

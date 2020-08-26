@@ -100,6 +100,6 @@ class __TwigTemplate_1133e77fa866cf247a53de635fc97a8e20d1819f364f843353f409692b5
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/move_column.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\move_column.twig");
+        return new Source("", "columns_definitions/move_column.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\move_column.twig");
     }
 }

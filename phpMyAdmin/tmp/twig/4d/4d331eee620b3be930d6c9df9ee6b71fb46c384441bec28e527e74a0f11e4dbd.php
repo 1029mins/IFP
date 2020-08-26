@@ -86,9 +86,9 @@ $context["key"] != "")) && (strpos($this->getAttribute(            // line 8
             echo "
     </textarea>
     ";
-            $___internal_c48f410f880491d5acc0fed7bb8d64a02caa0752b64437fbc829ef0b4c803c9f_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
+            $___internal_fa444ddb79e97e1403e8b9bf12e0705cc62a9dbc4478a43223cbefcc9ec5119c_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
             // line 17
-            echo twig_spaceless($___internal_c48f410f880491d5acc0fed7bb8d64a02caa0752b64437fbc829ef0b4c803c9f_);
+            echo twig_spaceless($___internal_fa444ddb79e97e1403e8b9bf12e0705cc62a9dbc4478a43223cbefcc9ec5119c_);
         } else {
             // line 25
             echo "    <input type=\"text\"
@@ -135,6 +135,6 @@ $context["key"] != "")) && (strpos($this->getAttribute(            // line 8
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_virtuality.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\columns_definitions\\column_virtuality.twig");
+        return new Source("", "columns_definitions/column_virtuality.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\columns_definitions\\column_virtuality.twig");
     }
 }

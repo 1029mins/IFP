@@ -84,6 +84,6 @@ class __TwigTemplate_9f4a0b44866ce58a5c7f2ecc319cf4fa927271a34ea23c292cd4e4d0b74
 
     public function getSourceContext()
     {
-        return new Source("", "navigation/logo.twig", "C:\\Users\\Otter\\Documents\\IFP_WEB\\phpMyAdmin\\templates\\navigation\\logo.twig");
+        return new Source("", "navigation/logo.twig", "C:\\git\\ifp\\phpMyAdmin\\templates\\navigation\\logo.twig");
     }
 }
