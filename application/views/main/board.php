@@ -44,7 +44,7 @@
 				<br>
 		<div class = "col-3" align="right">
         <?if ( $this -> session -> userdata('logged_in') == TRUE){?>
-        <button><font style="cursor:hand" onClick="location.href='./write.php'">글쓰기</font></button>
+        <button><font style="cursor:hand" onClick="location.href='/board/add'">글쓰기</font></button>
         <?}?>
         </div><br>
 <!-- board -->
@@ -104,10 +104,12 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">공지사항</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div>
+        <h5 class="modal-title" id="exampleModalLongTitle">공지사항<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button></h5>
+        
+        </div>
       </div>
       <div class="modal-body">
         IFP 회원 전용 자유 게시판 입니다.<br>
