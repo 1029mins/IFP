@@ -83,11 +83,11 @@
 		transition:.3s;
 	}
 	.image:hover img { /* 확대 */
-		-webkit-transform:scale(3);
-		-moz-transform:scale(3);
-		-ms-transform:scale(3);   
-		-o-transform:scale(3);
-		transform:scale(3);
+		-webkit-transform:scale(2);
+		-moz-transform:scale(2);
+		-ms-transform:scale(2);   
+		-o-transform:scale(2);
+		transform:scale(2);
 
 		z-index : 2;
 		position : relative; /*이거 제외하면 hover했을 때 최상위로 안올라옴. */
