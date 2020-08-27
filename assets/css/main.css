@@ -3175,7 +3175,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 	}
 
 	button.close {
-		padding: 0 !imporatnt;
+		padding: 0 !important;
 		text-align: right !important;
 		background-color: transparent !important;
 		border: 0 !important;
@@ -3197,5 +3197,12 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 @media screen and (max-width: 407px) { 
 	.carousel-inner img {max-height: 316px; min-width: 100%;}
 }
+
+/* 모바일 css */
+
+@media screen and (max-width: 736px){
+	section#main{
+		padding-top:50px !important;
+	}
 
 /*추가 끝*/
