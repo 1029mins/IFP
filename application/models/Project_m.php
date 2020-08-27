@@ -32,7 +32,7 @@
         //프로젝트 분류명 읽어오기
         function getlist_kind()
 		{
-			$sql="select * from project_kind order by no";
+			$sql="select name as kind_name,no from project_kind order by no";
 			return $this->db->query($sql)->result();
         } 
         

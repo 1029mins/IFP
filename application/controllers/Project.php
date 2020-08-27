@@ -70,19 +70,22 @@ class Project extends CI_Controller {
              
              
 		}
-    //프로젝트 추가(수정중임)
+    //프로젝트 추가(수정중임) 웨 값이 안들으가징 값 넘겨야됨
     public function add()
         {
             //$data["list"] = $this->project_m->getlist();
             $data["menu"] ='project';
+            $data["kindlist"] = $this->project_m->getlist_kind();
+
             $this->load->view("main/main_header",$data);
-            $this->load->view("main/project_add",$data);
+            $this->load->view("main/project_add");
             $this->load->view("main/main_footer");  
 
-            if ($_POST)
-         {
+            
+
             $data=array( 
-                'mamber_no' => "4",
+
+                //'mamber_no' => "4",
                 'kind_no' => "1",
                 'date' =>  date("Ymd"),
                 'title' => $this->input->post("title", true),
@@ -98,9 +101,20 @@ class Project extends CI_Controller {
             
 
             $result = $this->project_m->insertrow($data);
+
+                if($result != false ){
+                    $this->session->set_flashdata('message','프로젝트 등록성공');
+                }else{
+                echo "<script>alert(\"프로젝트 등록에 실패하였습니다..\");</script>";
+                }
             
-            redirect("/html/project/lists");    //   목록화면으로 이동.
-            }
+            //redirect("/project/lists");    //   목록화면으로 이동.
+
+        }
+
+    public function checkadd()
+        {
+
         }
     
         
