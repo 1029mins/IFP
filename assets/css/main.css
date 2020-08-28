@@ -3204,5 +3204,15 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 	section#main{
 		padding-top:50px !important;
 	}
+}
+
+/*form*/
+.custom .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+
 
 /*추가 끝*/

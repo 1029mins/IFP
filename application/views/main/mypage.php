@@ -1,5 +1,6 @@
-<?if(!$this -> session -> userdata('username')){ header("Location: /main"); exit();
+<?if(!$this -> session -> userdata('userno')){ header("Location: /main"); exit();
   }else{ 
+
 ?>
 </section>
 
@@ -50,13 +51,13 @@
             <ul class="divided">
             	<li>   
                 	<h3>Photo &emsp;
-                    <button>수정</button>
+                    <a href="/mypage/view"><button class="button alt" type="button">수정</button></a>
                     </h3>
             	</li>
                 <li><br><center>
                     <?
         				if ($row->pic) {	//이미지 O
-        					echo("<img src='/images/notice/$row->pic' alt='회원사진' width='100%'/>");
+        					echo("<img src='/images/member/$row->pic' alt='회원사진' width='100%'/>");
         				}
         				else {				//이미지X
         					echo("<img src='/assets/site_image/pic02.jpg' alt='대체이미지' width='100%'/>");
