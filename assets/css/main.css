@@ -3080,7 +3080,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 		font-size: 13px;
 	}
 	.modal-login .modal-footer a {
-		color: #999;
+		color: #3a3a3a;
 	}
 	.modal-login .avatar {
 		position: absolute;
