@@ -14,6 +14,7 @@
                 <article class="box post">
                     <header>   
                         <b style="font-size:2.0em; color:#555d6b">MYPAGE</b>
+                       
                         <hr>
                         <h3>   
                         <?
@@ -21,38 +22,22 @@
                         ?>
                         </h3>                  
                         <hr>
-                            <?=$row->info;?>
-                        <?/*
-                        $fileSize=filesize("./images/notice/".$row->filename);
-                        if($fileSize < 1024){
-                			$fileSize='('.number_format($fileSize * 1.024).'B)';
-                		}else if(($fileSize > 1024) && ($fileSize < 1024000)){
-                			$fileSize='('.number_format($fileSize * 0.001024).'KB)';
-                		}else if($fileSize > 1024000){
-                			$fileSize='('.number_format($fileSize * 0.000001024,2).'MB)';
-                		}*/
-                        ?>
-<!--
-                        <font color="#000000">
-                            <a style="color:black;" href="../../file/name/<?=$row->filename?>" ><?=$row->filename?>
-                            <?/*echo($row->filename)?$fileSize:"";*/?>
-                            </a>
-                        </font>
-                    -->
+                        <?
+        				if ($row->info) {	//이미지 O
+        					echo("$row->info");
+        				}
+        				else {				//이미지X
+        					echo("소개글이 없습니다.");
+        				}
+        			    ?> 
+            
                 	</header>
                    
                 	<p>
                 		
                 	</p>
                     <br><br>
-                    <?/*
-        				if ($row->pic) {	//이미지 O
-        					echo("<center><div class='image featured'><img src='/images/notice/$row->pic' alt='' /></div></center>");
-        				}
-        				else {				//이미지X
-        					echo("<div class='image featured'><img src='/assets/site_image/pic01.jpg' alt='대체이미지' /></div>");
-        				}*/
-        			?>
+                 
                 </article>
             </div>
 
@@ -62,11 +47,23 @@
             <!-- Sidebar -->
             <section class="box">
 
-            	<header>
-            		<h3>Photo&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-            	</header>
-                <ul class="divided">
-            		<li>	</ul>
+            <ul class="divided">
+            	<li>   
+                	<h3>Photo &emsp;
+                    <button>수정</button>
+                    </h3>
+            	</li>
+                <li><br><center>
+                    <?
+        				if ($row->pic) {	//이미지 O
+        					echo("<img src='/images/notice/$row->pic' alt='회원사진' width='100%'/>");
+        				}
+        				else {				//이미지X
+        					echo("<img src='/assets/site_image/pic02.jpg' alt='대체이미지' width='100%'/>");
+        				}
+        			?></center>
+                </li>   	
+            </ul>
 
             </section>
             </div>

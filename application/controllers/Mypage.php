@@ -6,7 +6,7 @@ class Mypage extends CI_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->database();
-        $this->load->model("notice_m");
+        $this->load->model("mypage_m");
         $this->load->helper(array("url", "date"));
         $this->load->library('upload');
         $this->load->library("pagination");
@@ -20,8 +20,8 @@ class Mypage extends CI_Controller {
     }
     public function view()
     {
-       $no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
- 
+       //$no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
+        $no = 71;
        //$this->load->library("form_validation");
 
        //$data["text1"]=$text1;
