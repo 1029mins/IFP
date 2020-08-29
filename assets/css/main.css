@@ -2028,6 +2028,10 @@ input, select, textarea {
 			cursor: default;
 		}
 
+		#pointer {
+			cursor: pointer !important;
+		}
+
 			.icon.featured:before {
 				font-size: 4.5em;
 				line-height: 1em;
@@ -3194,6 +3198,13 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 
 /* 메인 main carousel size */
 .carousel-inner img {max-height: 323px; min-width: 100%;}
+
+@media screen and (min-width: 960px) { 
+	.carousel-inner img {max-height: 449px; min-width: 100%;}
+}
+@media screen and (min-width: 744px) and (max-width: 960px) { 
+	.carousel-inner img {max-height: 485px; min-width: 100%;}
+}
 @media screen and (max-width: 407px) { 
 	.carousel-inner img {max-height: 316px; min-width: 100%;}
 }

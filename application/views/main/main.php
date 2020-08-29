@@ -40,27 +40,27 @@
 		<div class="row">
 			<div class="col-4 col-12-medium">
 				<section class="first">
-					<i class="icon solid featured fa-cog"></i>
+					<a href="/project"><i class="icon solid featured fa-cog" id="pointer"></i></a>
 					<header>
-						<h2>Project</h2>
+						<h2><a href="/project">Project</a></h2>
 					</header>
 					<p>창업대전, 공모전 등 프로젝트 제작 경험</p>
 				</section>
 			</div>
 			<div class="col-4 col-12-medium">
 				<section class="middle">
-					<i class="icon solid featured alt fa-bolt"></i>
+					<a href="/member"><i class="icon solid featured alt fa-bolt" id="pointer"></i></a>
 					<header>
-						<h2>People</h2>
+						<h2><a href="/member">People</a></h2>
 					</header>
 					<p>다양한 분야로 진출한 IFP 회원</p>
 				</section>
 			</div>
 			<div class="col-4 col-12-medium">
 				<section class="last">
-					<i href="gallery" class="icon solid featured alt2 fa-star"></i>
+					<a href="/gallery"><i class="icon solid featured alt2 fa-star" id="pointer"></i></a>
 					<header>
-						<h2><a href="gallery">Activity</a></h2>
+						<h2><a href="/gallery">Activity</a></h2>
 					</header>
 					<p>자체 세미나, 자격증 취득 등<br>
 						다양한 활동 진행</p>
@@ -80,46 +80,49 @@
 <section id="main">
 	<div class="container">
 		<div class="row">
+	<?	if($this -> session -> userdata('logged_in') == TRUE){
+	?>
 			<div class="col-12">
-
-		<!-- Blog -->
+			<!-- Blog -->
 			<section>
 				<header class="major">
 					<h2>공지사항</h2>
-
 					<div class="more" align="right">
 						<b>▶</b> <a href="notice">more</a>
 				    </div>
 				</header>
 				<div class="row">
 					<!--공지-->
-<?
-	foreach ($list_notice as $row)
-	{
-		$no_notice=$row->no;
-?>
-				<div class="col-6 col-6-small">
-					<a href="#" style="text-decoration: none;">
-					<section class="box">
-						<h4> <i class="fas fa-exclamation-circle"></i> <?=$row->title?></h4>
-						<p><? if($row->duedate){
-                            echo("$row->duedate 까지");
-                           }
-                        ?></p>
-					</section>
-					</a>
-					<div style="background:gray; padding:5px;"> </div>
-				</div>
-	<?
-	}
-	?>
+				<?
+				foreach ($list_notice as $row)
+				{
+					$no_notice=$row->no;
+				?>
+					<div class="col-6 col-6-small">
+						<a href="/notice/view/no/<?=$no_notice;?>" style="text-decoration: none;">
+						<section class="box">
+							<h4> <i class="fas fa-exclamation-circle"></i> <?=$row->title?></h4>
+							<p><? if($row->duedate){
+								echo("$row->duedate 까지");
+							}
+							?></p>
+						</section>
+						</a>
+						<div style="background:gray; padding:5px;"> </div>
+					</div>
+				<?
+				}
+				?>
 				</div>
 			</section>
-<br>
+			<br>
 			</div>
+		<?
+		}
+		?>
 
 			<div class="col-12">
-		<!-- Portfolio -->
+			<!-- Portfolio -->
 			<section>
 				<header class="major">
 					<h2>프로젝트</h2>
@@ -131,11 +134,11 @@
 				<section class="project">
 					<div class="row">
 						<!--프로젝트-->
-<?
-	foreach ($list_project as $row1)
-	{
-		$no_project=$row1->no;
-?>
+			<?
+			foreach ($list_project as $row1)
+			{
+				$no_project=$row1->no;
+			?>
 						
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box" style="padding-bottom:1em !important;">
@@ -155,10 +158,11 @@
 								</ul>
 							</section>
 						</div>
-<?
-	}
-?>						
-					</section>
+			<?
+			}
+			?>
+					</div>						
+				</section>
 			</section>
 			</div>
 	</div>
