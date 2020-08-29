@@ -80,46 +80,49 @@
 <section id="main">
 	<div class="container">
 		<div class="row">
+	<?	if($this -> session -> userdata('logged_in') == TRUE){
+	?>
 			<div class="col-12">
-
-		<!-- Blog -->
+			<!-- Blog -->
 			<section>
 				<header class="major">
 					<h2>공지사항</h2>
-
 					<div class="more" align="right">
 						<b>▶</b> <a href="notice">more</a>
 				    </div>
 				</header>
 				<div class="row">
 					<!--공지-->
-<?
-	foreach ($list_notice as $row)
-	{
-		$no_notice=$row->no;
-?>
-				<div class="col-6 col-6-small">
-					<a href="#" style="text-decoration: none;">
-					<section class="box">
-						<h4> <i class="fas fa-exclamation-circle"></i> <?=$row->title?></h4>
-						<p><? if($row->duedate){
-                            echo("$row->duedate 까지");
-                           }
-                        ?></p>
-					</section>
-					</a>
-					<div style="background:gray; padding:5px;"> </div>
-				</div>
-	<?
-	}
-	?>
+				<?
+				foreach ($list_notice as $row)
+				{
+					$no_notice=$row->no;
+				?>
+					<div class="col-6 col-6-small">
+						<a href="/notice/view/no/<?=$no_notice;?>" style="text-decoration: none;">
+						<section class="box">
+							<h4> <i class="fas fa-exclamation-circle"></i> <?=$row->title?></h4>
+							<p><? if($row->duedate){
+								echo("$row->duedate 까지");
+							}
+							?></p>
+						</section>
+						</a>
+						<div style="background:gray; padding:5px;"> </div>
+					</div>
+				<?
+				}
+				?>
 				</div>
 			</section>
-<br>
+			<br>
 			</div>
+		<?
+		}
+		?>
 
 			<div class="col-12">
-		<!-- Portfolio -->
+			<!-- Portfolio -->
 			<section>
 				<header class="major">
 					<h2>프로젝트</h2>
@@ -131,11 +134,11 @@
 				<section class="project">
 					<div class="row">
 						<!--프로젝트-->
-<?
-	foreach ($list_project as $row1)
-	{
-		$no_project=$row1->no;
-?>
+			<?
+			foreach ($list_project as $row1)
+			{
+				$no_project=$row1->no;
+			?>
 						
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box" style="padding-bottom:1em !important;">
@@ -155,10 +158,11 @@
 								</ul>
 							</section>
 						</div>
-<?
-	}
-?>						
-					</section>
+			<?
+			}
+			?>
+					</div>						
+				</section>
 			</section>
 			</div>
 	</div>
