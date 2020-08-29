@@ -73,49 +73,81 @@ class Project extends CI_Controller {
     //프로젝트 추가(수정중임) 웨 값이 안들으가징 값 넘겨야됨
     public function add()
         {
-            //$data["list"] = $this->project_m->getlist();
+            
+
+            $uri_array=$this->uri->uri_to_assoc(3);
+			//$text1 = array_key_exists("text1",$uri_array) ? "/text1/" .urldecode($uri_array["text1"]) : "" ;
+            //$page = array_key_exists("page",$uri_array) ? "/page/" . urldecode($uri_array["page"]) : "" ;
             $data["menu"] ='project';
             $data["kindlist"] = $this->project_m->getlist_kind();
+    
 
-            $this->load->view("main/main_header",$data);
-            $this->load->view("main/project_add");
-            $this->load->view("main/main_footer");  
 
+            $this->load->library("form_validation"); //form_validation 선언
+            $this->form_validation->set_rules('date', '프로젝트기간', 'required|min_length[1]|max_length[20]');
+            $this->form_validation->set_rules('title', '프로젝트명', 'required|min_length[1]|max_length[12]');
+            $this->form_validation->set_rules('names', '구성원', 'required|max_length[100]');
+            $this->form_validation->set_rules('contents', '내용', 'required|max_length[255]');
+            $this->form_validation->set_rules('url', 'url', 'required|max_length[255]');
             
-
-            $data=array( 
-
-                //'mamber_no' => "4",
-                'kind_no' => "1",
-                'date' =>  date("Ymd"),
-                'title' => $this->input->post("title", true),
-                'names' => $this->input->post("names", true),
-                'contents' => $this->input->post("contenst", true),
-                'url' => $this->input->post("url", true),
-                'pic' => " "
-               );
-
-               
-            //$picname = $this->call_upload();
-            //    if($picname) $data["pic"] = $picname;
             
+			if ( $this->form_validation->run()==FALSE )     // 실패
+			{
+				$data["menu"] ='project';
+                $data["kindlist"] = $this->project_m->getlist_kind();
+    
+                $this->load->view("main/main_header",$data);
+                $this->load->view("main/project_add");
+                $this->load->view("main/main_footer");  
+                
+                
+            }
+			else              //성공
+			{
+				$data=array( 
+                    //'mamber_no' => 4,
+                    'kind_no' => $this->input->post("kind_name", true),
+                    'date' =>  $this->input->post("date", true),
+                    'title' => $this->input->post("title", true),
+                    'names' => $this->input->post("names", true),
+                    'contents' => $this->input->post("contents", true),
+                    'url' => $this->input->post("url", true),
+                    'pic' => $this->input->post("pic",true)
+                    );
 
-            $result = $this->project_m->insertrow($data);
+                $picname = $this->call_upload();
+                if($picname) $data["pic"] = $picname;
+        
+                $result = $this->project_m->insertrow($data); 
 
-                if($result != false ){
-                    $this->session->set_flashdata('message','프로젝트 등록성공');
-                }else{
-                echo "<script>alert(\"프로젝트 등록에 실패하였습니다..\");</script>";
-                }
-            
-            //redirect("/project/lists");    //   목록화면으로 이동.
-
+                
+                
+                redirect("/project");    //   목록화면으로 이동.
+                
+			}
         }
 
-    public function checkadd()
-        {
+    public function call_upload()
+      {
+         $config['upload_path'] = './images/project';
+         $config['allowed_types'] = 'gif|jpg|png|jpeg';
+         $config['overwrite'] = TRUE;
+         $config['max_size'] = 10000000;
+         $config['max_width'] = 10000;
+         $config['max_height'] = 10000;
 
-        }
+         $this->upload->initialize($config);
+
+         if (!$this->upload->do_upload('pic'))
+         
+            $picname = "";
+         else
+         {
+            $picname = $this->upload->data("file_name");
+         }
+         return $picname;
+      }
+
     
         
     //project 수정
