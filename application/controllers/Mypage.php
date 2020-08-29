@@ -6,42 +6,75 @@ class Mypage extends CI_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->database();
-        $this->load->model("notice_m");
+        $this->load->model("mypage_m");
         $this->load->helper(array("url", "date"));
         $this->load->library('upload');
         $this->load->library("pagination");
         $this -> load -> helper('form');
+        $this -> load -> helper('alert');
         date_default_timezone_set("Asia/Seoul");
     }
     // 제일 먼저 실행되는 함수
     public function index()
     {
-        $this->view();
+        $this->lists();
+    }
+    public function lists()
+    {
+        if(!$this->session->userdata('userno')){
+            alert('로그인 후 사용가능합니다.'); 
+            redirect("/main");           
+        }else{
+            $no = $this->session->userdata('userno');
+	        $data["menu"] ='none';
+            $data["row"] = $this->mypage_m->getrow($no);
+            $this->load->view("main/main_header",$data);
+            $this->load->view("main/mypage");
+            $this->load->view("main/main_footer");
+        }
     }
     public function view()
     {
-       $no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
- 
-       //$this->load->library("form_validation");
-
-       //$data["text1"]=$text1;
-       //$data["page"]=$page;
-		
-	   $data["menu"] ='none';
-
-       //if($pic) $data["pic"]=$pic;
-
-       $data["row"] = $this->mypage_m->getrow($no);
-       $this->load->view("main/main_header",$data);
-       $this->load->view("main/mypage");
-       $this->load->view("main/main_footer");
+        if(!$this->session->userdata('userno')){
+            redirect("/main"); 
+        }else{
+            $no = $this->session->userdata('userno');
+            $data["menu"] ='none';
+            $data["row"] = $this->mypage_m->getrow($no);
+            $this->load->view("main/main_header",$data);
+            $this->load->view("main/mypage_view",$data);
+            $this->load->view("main/main_footer");
+        }
     }
-    public function file()
+    public function edit()
     {
-        $uri_array=$this->uri->uri_to_assoc(3);
-        $filename = array_key_exists("name",$uri_array) ? urldecode($uri_array["name"]) : "" ;
-        $data["filename"]=$filename;
-        $this->load->view("main/file",$data);
+        if(!$this->session->userdata('userno')){
+            redirect("/main"); 
+        }else{
+            $no = $this->session->userdata('userno');
+            $data["info"] = $this->input->post("info",true);
+            $pic = $this->call_upload();
+            if($pic) $data["pic"]=$pic;
+            $this->mypage_m->updaterow($data, $no);
+            redirect("/mypage/lists/");
+        }    
+    }
+
+    public function call_upload()
+    {
+        $config['upload_path']	= './images/member';
+        $config['allowed_types']	= 'gif|jpg|png|jpeg';
+        $config['overwrite']	= TRUE;
+        $config['max_size']	= 10000000;
+        $config['max_width']	= 10000;
+        $config['max_height']	= 10000;
+        $this->upload->initialize($config);
+
+        if (!$this->upload->do_upload('pic'))
+            $picname="";
+        else
+            $picname=$this->upload->data("file_name");
+        return $picname;
     }
 
 

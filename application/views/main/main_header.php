@@ -80,13 +80,11 @@
     height: 95px;
     border-radius: 50%;
     z-index: 9;
-    background: #60c7c1;
+    background: #219891;
     padding: 15px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
    }
-   .modal-login .avatar img {
-       width: 100%;
-   }
+
    .modal-content {
        padding: 10px;
    }
