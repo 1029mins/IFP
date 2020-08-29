@@ -40,27 +40,27 @@
 		<div class="row">
 			<div class="col-4 col-12-medium">
 				<section class="first">
-					<i class="icon solid featured fa-cog"></i>
+					<a href="/project"><i class="icon solid featured fa-cog" id="pointer"></i></a>
 					<header>
-						<h2>Project</h2>
+						<h2><a href="/project">Project</a></h2>
 					</header>
 					<p>창업대전, 공모전 등 프로젝트 제작 경험</p>
 				</section>
 			</div>
 			<div class="col-4 col-12-medium">
 				<section class="middle">
-					<i class="icon solid featured alt fa-bolt"></i>
+					<a href="/member"><i class="icon solid featured alt fa-bolt" id="pointer"></i></a>
 					<header>
-						<h2>People</h2>
+						<h2><a href="/member">People</a></h2>
 					</header>
 					<p>다양한 분야로 진출한 IFP 회원</p>
 				</section>
 			</div>
 			<div class="col-4 col-12-medium">
 				<section class="last">
-					<i href="gallery" class="icon solid featured alt2 fa-star"></i>
+					<a href="/gallery"><i class="icon solid featured alt2 fa-star" id="pointer"></i></a>
 					<header>
-						<h2><a href="gallery">Activity</a></h2>
+						<h2><a href="/gallery">Activity</a></h2>
 					</header>
 					<p>자체 세미나, 자격증 취득 등<br>
 						다양한 활동 진행</p>
