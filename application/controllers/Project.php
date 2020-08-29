@@ -105,7 +105,7 @@ class Project extends CI_Controller {
 			else              //성공
 			{
 				$data=array( 
-                    //'mamber_no' => 4,
+                    //'mamber_no' => $this->session->userdata('userno'),
                     'kind_no' => $this->input->post("kind_name", true),
                     'date' =>  $this->input->post("date", true),
                     'title' => $this->input->post("title", true),
@@ -115,8 +115,8 @@ class Project extends CI_Controller {
                     'pic' => $this->input->post("pic",true)
                     );
 
-                $picname = $this->call_upload();
-                if($picname) $data["pic"] = $picname;
+                    $picname = $this->call_upload();
+                        if($picname) $data["pic"] = $picname;
         
                 $result = $this->project_m->insertrow($data); 
 
@@ -127,27 +127,23 @@ class Project extends CI_Controller {
 			}
         }
 
-    public function call_upload()
-      {
-         $config['upload_path'] = './images/project';
-         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-         $config['overwrite'] = TRUE;
-         $config['max_size'] = 10000000;
-         $config['max_width'] = 10000;
-         $config['max_height'] = 10000;
-
-         $this->upload->initialize($config);
-
-         if (!$this->upload->do_upload('pic'))
-         
-            $picname = "";
-         else
-         {
-            $picname = $this->upload->data("file_name");
-         }
-         return $picname;
-      }
-
+        public function call_upload()
+        {
+            $config['upload_path']	= './images/project';
+            $config['allowed_types']	= 'gif|jpg|png|jpeg';
+            $config['overwrite']	= TRUE;
+            $config['max_size']	= 10000000;
+            $config['max_width']	= 10000;
+            $config['max_height']	= 10000;
+            $this->upload->initialize($config);
+    
+            if (!$this->upload->do_upload('pic'))
+                $picname="";
+            else
+                $picname=$this->upload->data("file_name");
+            return $picname;
+        }
+    
     
         
     //project 수정

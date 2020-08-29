@@ -1,3 +1,4 @@
+
 <style>
 
 
@@ -125,7 +126,7 @@
 					<label for="date" class="col-sm-2 control-label">프로젝트기간 <span style="color: red; ">*</span></label>
 					<div class="col-sm-10">
 					  <input class="check" type="text" style="float:left; width:100%;" name="date" value="<?echo set_value('date')?>" placeholder="프로젝트 기간"> 
-					  &nbsp;YY-MM-DD ~ YY-MM-DD 형식으로 입력하세요.
+					  <span style="color: red; ">&nbsp;YY-MM-DD ~ YY-MM-DD 형식으로 입력하세요.</span>
 					</div>
 				  </div>
 
@@ -147,6 +148,7 @@
 					<label for="pic" class="col-sm-2 control-label">이미지 파일 </label>
 					<div class="col-sm-10">
 					  <input type="file" style="float:left; width:100%;" name="pic" value="<?echo set_value('pic')?>"placeholder="이미지 파일">
+					  <span style="color: red; ">&nbsp;파일이름을 영어로 입력해주세요.</span>
 					</div>
 				  </div>
 
