@@ -37,9 +37,13 @@
                 		<h2><?=$row->title?></h2>
                 		<p><?=$row->date?></p>
                 	</header>
-                	<p>
-						<?=$row->contents?>
-                	</p>
+					<hr>
+					<p><b>OS  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_os?></p>
+					<p><b>DBMS  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_db?></p>
+					<p><b>TOOL  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_tool?></p>
+					<p><b>목 적  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_goal?></p>
+                	<p><b>내 용  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents?></p>
+					<hr>
                     <br><br>
 
 					<p style="text-align: center;">
@@ -54,7 +58,7 @@
 						}
 					?>
 					</p>
-					<p style="text-align: center;">URL : <a href="<?=$row->url?>"><?=$row->url?></a></p>
+					<p style="text-align: left;">URL : <a href="<?=$row->url?>"><?=$row->url?></a></p>
                 </article>
 
 				<div style="text-align:right;">

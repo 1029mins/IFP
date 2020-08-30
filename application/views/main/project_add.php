@@ -92,7 +92,11 @@
 				<header>
 					<h3 style="color:#444545 !important;">&nbsp; &nbsp;NEW 프로젝트</h3>
 				</header>
+				&nbsp; &nbsp;&nbsp; &nbsp;<span style="color: red; ">*</span>는 필수사항입니다.
 				<br>
+				<br>
+
+				
 				
 				<section>
 				<form class="form-horizontal" autocomplete="on" name="addFrm" id="addFrm" method="post" accept-charset="utf-8" enctype="multipart/form-data">
@@ -150,6 +154,47 @@
 					</div>
 				  </div>
 
+				 
+
+				  <hr>
+
+				  <div class="form-group">
+					<label for="contents" class="col-sm-2 control-label">OS <span style="color: red; ">*</span></label>
+					<div class="col-sm-10">
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_os" value="<?echo set_value('contents_os')?>" placeholder="OS"></input>
+					</div>
+				  </div>
+
+				  <div class="form-group">
+					<label for="contents" class="col-sm-2 control-label">DBMS <span style="color: red; ">*</span></label>
+					<div class="col-sm-10">
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_db" value="<?echo set_value('contents_db')?>" placeholder="DBMS"></input>
+					</div>
+				  </div>
+
+				  <div class="form-group">
+					<label for="contents" class="col-sm-2 control-label">TOOL <span style="color: red; ">*</span></label>
+					<div class="col-sm-10">
+					  <input type="text"  style="float:left; width:100%; resize: none;" name="contents_tool" value="<?echo set_value('contents_tool')?>" placeholder="TOOL"></input>
+					</div>
+				  </div>
+
+				  <div class="form-group">
+					<label for="contents" class="col-sm-2 control-label">목 적 <span style="color: red; ">*</span></label>
+					<div class="col-sm-10">
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_goal" value="<?echo set_value('contents_goal')?>" placeholder="목 적"></input>
+					</div>
+				  </div>
+
+				  <div class="form-group">
+					<label for="contents" class="col-sm-2 control-label">내 용 <span style="color: red; ">*</span></label>
+					<div class="col-sm-10">
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents" value="<?echo set_value('contents')?>" placeholder="내 용"></input>
+					</div>
+				  </div>
+
+				  <hr>
+
 				  <div class="form-group">
 					<label for="pic" class="col-sm-2 control-label">이미지 파일 </label>
 					<div class="col-sm-10">
@@ -162,13 +207,6 @@
 					<label for="url" class="col-sm-2 control-label">유튜브 링크</label>
 					<div class="col-sm-10">
 					  <input type="text" style="float:left; width:100%;" name="url" value="<?echo set_value('url')?>" placeholder="youtube">
-					</div>
-				  </div>
-
-				  <div class="form-group">
-					<label for="contents" class="col-sm-2 control-label">내 용 <span style="color: red; ">*</span></label>
-					<div class="col-sm-10">
-					  <input type="textarea" class="check" style="float:left; width:100%; resize: none;" name="contents" value="<?echo set_value('contents')?>" placeholder="내 용" rows="5"></input>
 					</div>
 				  </div>
 

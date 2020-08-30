@@ -120,6 +120,10 @@ class Project extends CI_Controller {
                     'date' =>  $date,
                     'title' => $this->input->post("title", true),
                     'names' => $this->input->post("names", true),
+                    'contents_goal' => $this->input->post("contents_goal", true),
+                    'contents_os' => $this->input->post("contents_os", true),
+                    'contents_db' => $this->input->post("contents_db", true),
+                    'contents_tool' => $this->input->post("contents_tool", true),
                     'contents' => $this->input->post("contents", true),
                     'url' => $this->input->post("url", true),
                     'pic' => $this->input->post("pic",true)
@@ -200,6 +204,10 @@ class Project extends CI_Controller {
                     'date' =>  $date,
                     'title' => $this->input->post("title", true),
                     'names' => $this->input->post("names", true),
+                    'contents_goal' => $this->input->post("contents_goal", true),
+                    'contents_os' => $this->input->post("contents_os", true),
+                    'contents_db' => $this->input->post("contents_db", true),
+                    'contents_tool' => $this->input->post("contents_tool", true),
                     'contents' => $this->input->post("contents", true),
                     'url' => $this->input->post("url", true),
                     'pic' => $this->input->post("pic",true)
