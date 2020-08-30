@@ -88,7 +88,8 @@ class Project extends CI_Controller {
 
 
             $this->load->library("form_validation"); //form_validation 선언
-            $this->form_validation->set_rules('date', '프로젝트기간', 'required|min_length[1]|max_length[50]');
+            $this->form_validation->set_rules('date1', '프로젝트기간1', 'required|min_length[1]|max_length[20]');
+            $this->form_validation->set_rules('date1', '프로젝트기간2', 'required|min_length[1]|max_length[20]');
             $this->form_validation->set_rules('title', '프로젝트명', 'required|min_length[1]|max_length[20]');
             $this->form_validation->set_rules('names', '구성원', 'required|max_length[100]');
             $this->form_validation->set_rules('contents', '내용', 'required|max_length[255]');
@@ -108,11 +109,14 @@ class Project extends CI_Controller {
             }
 			else              //성공
 			{
+                $date1 = $this->input->post("date1", true);
+                $date2 = $this->input->post("date2", true);
+                $date = sprintf("%-10s%-3s%-10s",$date1," ~ ",$date1);
                 
 				$data=array( 
                     'member_no' => $this->session->userdata('userno'),
                     'kind_no' => $this->input->post("kind_name", true),
-                    'date' =>  $this->input->post("date", true),
+                    'date' =>  $date,
                     'title' => $this->input->post("title", true),
                     'names' => $this->input->post("names", true),
                     'contents' => $this->input->post("contents", true),

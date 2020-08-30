@@ -54,9 +54,9 @@
         //프로젝트기간
 		//var regNumber = /^[0-9]*$/;
 
-        if(isBlank(doc.date)){
+        if(isBlank(doc.date1)||isBlank(doc.date2)){
             alert("프로젝트 기간을 입력해 주세요.");
-            doc.date.focus();
+            doc.date1.focus();
             return false;
         }
 
@@ -124,10 +124,15 @@
 
 				  <div class="form-group">
 					<label for="date" class="col-sm-2 control-label">프로젝트기간 <span style="color: red; ">*</span></label>
-					<div class="col-sm-10">
-					  <input class="check" type="text" style="float:left; width:100%;" name="date" value="<?echo set_value('date')?>" placeholder="프로젝트 기간"> 
-					  <span style="color: red; ">&nbsp;YY-MM-DD ~ YY-MM-DD 형식으로 입력하세요.</span>
-					</div>
+						<div class="col-xs-3">  
+					  		<input class="check" type="date" style="float:left; width:100%;" name="date1" value="<?echo set_value('date1')?>" placeholder="프로젝트 기간">
+					  	</div> 
+						<div class="col-xs-1" style="padding:0; text-align:center;">  
+					  		<h1> ~ <h1>
+					  	</div> 
+						<div class="col-xs-3">
+						  	<input class="check" type="date" style="float:left; width:100%;" name="date2" value="<?echo set_value('date2')?>" placeholder="프로젝트 기간"> 
+						</div>
 				  </div>
 
 				  <div class="form-group">
