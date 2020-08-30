@@ -115,7 +115,7 @@ class Project extends CI_Controller {
                 
 				$data=array( 
                     'member_no' => $this->session->userdata('userno'),
-                    'kind_no' => $this->input->post("kind_name", true),
+                    'kind_no' => $this->input->post("kind_no", true),
                     'date' =>  $date,
                     'title' => $this->input->post("title", true),
                     'names' => $this->input->post("names", true),

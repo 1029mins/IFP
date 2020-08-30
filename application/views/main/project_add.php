@@ -45,9 +45,9 @@
         //종류
         var regNumber = /^[0-9]*$/;
 
-        if(isBlank(doc.kind_name)){
+        if(isBlank(doc.kind_no)){
             alert("종류를 선택해 주세요.")
-            doc.kind_name.focus();
+            doc.kind_no.focus();
             return false;
         }
 
@@ -108,15 +108,16 @@
 				  <div class="form-group">
 					<label for="kind" class="col-sm-2 control-label">종류 <span style="color: red; ">*</span></label>
 					<div class="col-sm-10">
-					  <select class="form-control" value="<?=$row->kind_name?>" name="kind_name">
+					  <select class="form-control" name="kind_no">
 					  <?
-						  foreach($kindlist as $row1)
-						  {
-							  $kind = $row1->kind_name;
-							  ?>
-							  <option value="<?=$row1->no?>"><?=$kind?></option>
-							  <?
-						  }
+						$kind_no=set_value("kind_no");
+						foreach($kindlist as $row1)
+						{
+							if($row1->kind_no == $kind_no)
+								echo("<option value='$row1->no' selected>$row1->kind_name</option>");
+							else
+								echo("<option value='$row1->no'>$row1->kind_name</option>");	
+						}
 					  ?> 
 					</select>
 					</div>
