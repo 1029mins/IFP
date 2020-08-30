@@ -50,11 +50,14 @@
 <!--portfolio-->
 	<section>
 		<div class="row">
-		<div class="col-12" style="text-align:right;">
-			<a href="/project/add"><button class="button alt" type="button">글쓰기</button></a>
-		</div>
-		<?
-			foreach ($list as $row)
+			<div class="col-12" style="text-align:right;">
+		<? 	if ( $this -> session -> userdata('logged_in') == TRUE) {
+		?>
+				<a href="/project/add"><button class="button alt" type="button">글쓰기</button></a>
+		<?	}
+		?>
+			</div>
+		<?	foreach ($list as $row)
 			{
 				$no=$row->no;
 

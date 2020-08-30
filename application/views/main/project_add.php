@@ -36,8 +36,8 @@
             doc.title.focus();
             return false;
         }
-        if(doc.title.value.length >= 13){ //나중에 이거 12자 제한으로.
-			alert("프로젝트명을 12자 이내로 입력해주세요.");
+        if(doc.title.value.length >= 20){
+			alert("프로젝트명을 20자 이내로 입력해주세요.");
             doc.title.focus();
             return false;
         }
@@ -133,7 +133,7 @@
 				  <div class="form-group">
 					<label for="member" class="col-sm-2 control-label">작성자</label>
 					<div class="col-sm-10">
-					  <input type="text" class="form-control"style="float:left; width:100%;" name="member" value="4" placeholder="작성자이름 고정" disabled>
+					  <input type="text" class="form-control"style="float:left; width:100%;" value="<?echo($this->session->userdata('username'));?>" placeholder="작성자이름 고정" disabled>
 					</div>
 				  </div>
 
@@ -155,7 +155,7 @@
 				  <div class="form-group">
 					<label for="url" class="col-sm-2 control-label">유튜브 링크</label>
 					<div class="col-sm-10">
-					  <input type="text" style="float:left; width:100%;" name="url" value="<?echo set_value('url')?>" placeholder="youtude">
+					  <input type="text" style="float:left; width:100%;" name="url" value="<?echo set_value('url')?>" placeholder="youtube">
 					</div>
 				  </div>
 

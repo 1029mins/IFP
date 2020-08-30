@@ -11,6 +11,7 @@ class Project extends CI_Controller {
             $this->load->library('image_lib');
 			$this->load->library("pagination");
             $this->load->library('session');    //세션 작성자
+            $this->load->helper('alert');
             date_default_timezone_set("Asia/Seoul");
         }
     // 제일 먼저 실행되는 함수
@@ -73,7 +74,10 @@ class Project extends CI_Controller {
     //프로젝트 추가(수정중임) 웨 값이 안들으가징 값 넘겨야됨
     public function add()
         {
-            
+            if ( $this -> session -> userdata('logged_in') != TRUE) {
+                alert('로그인 후 사용가능합니다.');
+                redirect("/project");                                   
+            }
 
             $uri_array=$this->uri->uri_to_assoc(3);
 			//$text1 = array_key_exists("text1",$uri_array) ? "/text1/" .urldecode($uri_array["text1"]) : "" ;
@@ -84,11 +88,11 @@ class Project extends CI_Controller {
 
 
             $this->load->library("form_validation"); //form_validation 선언
-            $this->form_validation->set_rules('date', '프로젝트기간', 'required|min_length[1]|max_length[20]');
-            $this->form_validation->set_rules('title', '프로젝트명', 'required|min_length[1]|max_length[12]');
+            $this->form_validation->set_rules('date', '프로젝트기간', 'required|min_length[1]|max_length[50]');
+            $this->form_validation->set_rules('title', '프로젝트명', 'required|min_length[1]|max_length[20]');
             $this->form_validation->set_rules('names', '구성원', 'required|max_length[100]');
             $this->form_validation->set_rules('contents', '내용', 'required|max_length[255]');
-            $this->form_validation->set_rules('url', 'url', 'required|max_length[255]');
+            $this->form_validation->set_rules('url', 'url', 'max_length[255]');
             
             
 			if ( $this->form_validation->run()==FALSE )     // 실패
@@ -104,8 +108,9 @@ class Project extends CI_Controller {
             }
 			else              //성공
 			{
+                
 				$data=array( 
-                    //'mamber_no' => $this->session->userdata('userno'),
+                    'member_no' => $this->session->userdata('userno'),
                     'kind_no' => $this->input->post("kind_name", true),
                     'date' =>  $this->input->post("date", true),
                     'title' => $this->input->post("title", true),
