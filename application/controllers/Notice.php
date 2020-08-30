@@ -20,10 +20,7 @@ class Notice extends CI_Controller {
     }
     public function lists()
     {
-        if ( $this -> session -> userdata('logged_in') != TRUE) {
-            alert('로그인 후 사용가능합니다.');
-            redirect("/main");                                   
-        }else{
+
             $uri_array=$this->uri->uri_to_assoc(3);
             $text1 = array_key_exists("text1",$uri_array) ? urldecode($uri_array["text1"]) : "" ;
 
@@ -49,13 +46,18 @@ class Notice extends CI_Controller {
 
             $data["list"] = $this->notice_m->getlist($text1, $start, $limit);
             $this->load->view("main/main_header",$data);
-            $this->load->view("main/notice",$data);
+            if ( $this -> session -> userdata('logged_in') != TRUE) {               
+                $this->load->view("main/login_suggest");
+            }else{
+                $this->load->view("main/notice",$data);
+            }
             $this->load->view("main/main_footer");
-        }   
+           
     }
     public function view()
     {
         if ( $this -> session -> userdata('logged_in') != TRUE) {
+            alert('로그인 후 사용 가능 합니다.');
             redirect("/main");                                   
         }else{
             $uri_array=$this->uri->uri_to_assoc(3);

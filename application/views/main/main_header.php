@@ -186,7 +186,7 @@
                   <a href="/docs">Community</a>
                      <ul>
                         <li><a class="a_open" href="/docs">자료실</a></li>
-                        <li><a class="a_open" href="/board">자유게시판</a></li>
+                        <?/*<li><a class="a_open" href="/board">자유게시판</a></li>*/?>
                      </ul>
                </li>
                <li class="member"><a href="/member">Member</a></li>
