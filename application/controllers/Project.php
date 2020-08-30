@@ -32,10 +32,11 @@ class Project extends CI_Controller {
 				$base_url = "/project/lists/text1/$text1/page";
 			$page_segment = substr_count( substr($base_url,0,strpos($base_url,"page")) , "/" )+1;
 			//$base_url = "/~sale26" . $base_url;
-			$config["per_page"]	 = 10;								// 페이지당 표시할 line 수
+			$config["per_page"]	 = 9;								// 페이지당 표시할 line 수
 			$config["total_rows"] = $this->project_m->rowcount($text1);		// 전체 레코드개수 구하기
 			$config["uri_segment"] = $page_segment;					// 페이지가 있는 segment 위치
-			$config["base_url"]	 = $base_url;						// 기본 URL
+            $config["base_url"]	 = $base_url;						// 기본 URL                                                      
+
 			$this->pagination->initialize($config);					// pagination 설정 적용
 			$data["page"]=$this->uri->segment($page_segment,0);		// 시작위치, 없으면 0.
 			$data["pagination"] = $this->pagination->create_links();// 페이지소스 생성

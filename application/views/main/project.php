@@ -50,6 +50,7 @@
 <!--portfolio-->
 	<section>
 		<div class="row">
+		
 			<div class="col-12" style="text-align:right;">
 		<? 	if ( $this -> session -> userdata('logged_in') == TRUE) {
 		?>
@@ -130,7 +131,7 @@
 
 	</div>
 
-	<div class="pagination " style="justify-content: center;">
+	<div style="text-align:center;">
 	  <?=$pagination;?>
 	</div>
 
