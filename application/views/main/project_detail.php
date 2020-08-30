@@ -54,12 +54,19 @@
 						}
 					?>
 					</p>
-					<p style="text-align: center;"><a href="#"><?=$row->url?></a></p>
+					<p style="text-align: center;">URL : <a href="<?=$row->url?>"><?=$row->url?></a></p>
                 </article>
 
 				<div style="text-align:right;">
-					<a href="/project/edit/no/<?=$no?>"><button class="button alt" type="button">수정</button></a>
-					<a href="/project/delete/no/<?=$no?>" onclick="return confirm('삭제할까요?');"><button class="button alt" type="button">삭제</button></a>
+				<? 	if ( $this -> session -> userdata('logged_in') == TRUE) {
+						if($this -> session -> userdata('userno')==$row->member_no)
+						{
+					?>
+						<a href="/project/edit/no/<?=$no?>"><button class="button alt" type="button">수정</button></a>
+						<a href="/project/delete/no/<?=$no?>" onclick="return confirm('삭제할까요?');"><button class="button alt" type="button">삭제</button></a>
+					<?	}
+					}
+				?>
 				</div>
 			
             </div>

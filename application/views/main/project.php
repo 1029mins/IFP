@@ -74,7 +74,17 @@
 						}
 					?>
 					<header>
-						<h4><?=$row->title?></h4>
+						<h4><a href='/project/view/no/<?=$no?>'>
+						<? if (strlen($row->title)>20)
+								{
+									echo(mb_substr($row->title, 0, 15, 'utf-8').'. . .');
+								}
+								else
+								{
+									echo(mb_substr($row->title, 0, 19, 'utf-8'));
+								}
+						?></a>
+						</h4>
 						
 					</header>
 					<table border="1px">

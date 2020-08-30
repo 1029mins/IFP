@@ -71,7 +71,7 @@ class Project extends CI_Controller {
              
              
 		}
-    //프로젝트 추가(수정중임) 웨 값이 안들으가징 값 넘겨야됨
+    //프로젝트 추가
     public function add()
         {
             if ( $this -> session -> userdata('logged_in') != TRUE) {
@@ -158,6 +158,10 @@ class Project extends CI_Controller {
     //project 수정
     public function edit()
 		{
+            if ( $this -> session -> userdata('logged_in') != TRUE) {
+                alert('로그인 후 사용가능합니다.');
+                redirect("/project");                                   
+            }
             $uri_array=$this->uri->uri_to_assoc(3);
             $no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
             $text1 = array_key_exists("text1",$uri_array) ? urldecode($uri_array["text1"]) : "" ;
