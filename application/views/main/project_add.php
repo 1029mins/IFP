@@ -173,7 +173,7 @@
 				  </div>
 
 				  <div align="center">
-				  <button type="submit" class="button alt">등록하기</button>
+				  <button type="submit" class="button alt">등록하기  </button>
 				  </div>
 
 				</form>
