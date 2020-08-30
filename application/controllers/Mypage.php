@@ -22,7 +22,7 @@ class Mypage extends CI_Controller {
     public function lists()
     {
         if(!$this->session->userdata('userno')){
-            alert('로그인 후 사용가능합니다.'); 
+            alert('로그인 후 사용 가능 합니다.'); 
             redirect("/main");           
         }else{
             $no = $this->session->userdata('userno');
