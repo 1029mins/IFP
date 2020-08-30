@@ -29,12 +29,16 @@
 		<div >
 			<section class="box">
 				<header>
-					<h3 style="color:#444545 !important;">&nbsp; &nbsp;<?=$row->no?>번 프로젝트</h3>
+					<h3 style="color:#444545 !important;">&nbsp; &nbsp;<?=$row->title?></h3>
 				</header>
 				<br>
 				
 				<section>
 				<form class="form-horizontal"name="form1" method="post" action="" enctype="multipart/form-data">
+				<?
+					$date1 = trim(substr($row->date,0,10));
+					$date2 = trim(substr($row->date,13,23));
+				?>
 
 				  <div class="form-group">
 					<label for="title" class="col-sm-2 control-label">프로젝트명</label>
@@ -46,21 +50,31 @@
 				  <div class="form-group">
 					<label for="kind" class="col-sm-2 control-label">종류</label>
 					<div class="col-sm-10">
-					<input type="hidden" name="kind" value="<?=$row->kind_name;?>">
-					  <select class="form-control" name="kind" value="<?=$row->kind_name;?>">
-
-					  <option><?=$row->kind_name;?></option>
-
+					  <select class="form-control" name="kind_no">
+					  <?
+						foreach($kindlist as $row1)
+						{
+							if($row1->no == $row->kind_no)
+								echo("<option value='$row1->no' selected>$row1->kind_name</option>");
+							else
+								echo("<option value='$row1->no'>$row1->kind_name</option>");	
+						}
+					  ?> 
 					</select>
 					</div>
 				  </div>
 
 				  <div class="form-group">
-					<label for="date" class="col-sm-2 control-label">프로젝트기간</label>
-					<div class="col-sm-10">
-					  <input type="text" style="float:left; width:100%;" name="date" value="<?=$row->date?>" placeholder="프로젝트 기간">
-					  &nbsp;YY-MM-DD ~ YY-MM-DD 형식으로 입력하세요.
-					</div>
+					<label for="date" class="col-sm-2 control-label">프로젝트기간 </label>
+						<div class="col-xs-3">  
+					  		<input class="check" type="date" style="float:left; width:100%;" name="date1" value="<?=$date1;?>" placeholder="프로젝트 기간">
+					  	</div> 
+						<div class="col-xs-1" style="padding:0; text-align:center;">  
+					  		<h1> ~ <h1>
+					  	</div> 
+						<div class="col-xs-3">
+						  	<input class="check" type="date" style="float:left; width:100%;" name="date2" value="<?=$date2;?>" placeholder="프로젝트 기간"> 
+						</div>
 				  </div>
 
 				  <div class="form-group">
@@ -98,15 +112,16 @@
 					</div>
 				  </div>
 
-				</form>
+				
 				</section>
 
 				<footer>
 					<div style="text-align:right;">
 				  		<a href="/project/view/no/<?=$row->no?>"><button class="button alt" type="button">이전으로</button></a>
-						<a href="/project/edit/no/<?=$row->no?>"><button class="button alt" type="button">수정</button></a>
+						<a href="/project/edit/no/<?=$row->no?>"><button class="button alt" type="submit">수정</button></a>
 				  	</div>
 				</footer>
+				</form>
 			</section>
 		</div>
 	</div>

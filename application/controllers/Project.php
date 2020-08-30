@@ -111,7 +111,7 @@ class Project extends CI_Controller {
 			{
                 $date1 = $this->input->post("date1", true);
                 $date2 = $this->input->post("date2", true);
-                $date = sprintf("%-10s%-3s%-10s",$date1," ~ ",$date1);
+                $date = sprintf("%-10s%-3s%-10s",$date1," ~ ",$date2);
                 
 				$data=array( 
                     'member_no' => $this->session->userdata('userno'),
@@ -168,13 +168,13 @@ class Project extends CI_Controller {
             $data["page"]=$page;
             $data["menu"] ='project';
 
-
+            $data["kindlist"] = $this->project_m->getlist_kind();
             $data["row"] = $this->project_m->getrow($no);
 
 			$this->load->library("form_validation");
-			//$this->form_validation->set_rules("name","이름","required|max_length[20]");
-			//$this->form_validation->set_rules("genre_no","장르번호","required|max_length[20]");
-
+            $this->form_validation->set_rules('title', '프로젝트명', 'required|min_length[1]|max_length[20]');
+            
+            
 			if ( $this->form_validation->run()==FALSE )     // 수정버튼 클릭한 경우
 			{
 				$data["row"]=$this->project_m->getrow($no);
@@ -185,30 +185,26 @@ class Project extends CI_Controller {
 			}
 			else
 			{		
+                $date1 = $this->input->post("date1", true);
+                $date2 = $this->input->post("date2", true);
+                $date = sprintf("%-10s%-3s%-10s",$date1," ~ ",$date2);
 
 				$data=array( 
-					'name' => $this->input->post("name", true),
-					'genre_no' => $this->input->post("genre_no", true),
-					'director' => $this->input->post("director", true),
-					'actor' =>  $this->input->post("actor", true),
-					'rating_no' => $this->input->post("rating_no", true), 
-					'add_audience' => $this->input->post("add_audience", true),
-					'release_date' => $this->input->post("release_date", true),
-					'running_time' => $this->input->post("running_time", true),
-					'poster' => $this->input->post("poster", true),
-					'summary' => $this->input->post("summary", true),
-					'trailer' => $this->input->post("trailer", true)
-					);
-				$poster = $this->call_upload();
-         if($poster) $data["poster"] = $poster;
+                    'member_no' => $this->session->userdata('userno'),
+                    'kind_no' => $this->input->post("kind_no", true),
+                    'date' =>  $date,
+                    'title' => $this->input->post("title", true),
+                    'names' => $this->input->post("names", true),
+                    'contents' => $this->input->post("contents", true),
+                    'url' => $this->input->post("url", true),
+                    'pic' => $this->input->post("pic",true)
+                );
+                $picname = $this->call_upload();
+                if($picname) $data["pic"] = $picname;
+    
+                $result = $this->project_m->updaterow($data,$no); 
+                redirect("/project/view/no/$no");
 
-				 $trailer = $this->call_upload2();
-         if($trailer) $data["trailer"] = $trailer;
-
-         $result = $this->project_m->updaterow($data, $no);
-       
-         redirect("/html/project/lists" . $text1 . $page); 
-      
 			}
         }
         
