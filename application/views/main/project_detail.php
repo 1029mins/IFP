@@ -38,11 +38,11 @@
                 		<p><?=$row->date?></p>
                 	</header>
 					<hr>
-					<p><b>OS  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_os?></p>
+					<p><b>O&nbsp;&nbsp;&nbsp;&nbsp;S  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_os?></p>
 					<p><b>DBMS  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_db?></p>
 					<p><b>TOOL  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_tool?></p>
-					<p><b>목 적  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_goal?></p>
-                	<p><b>내 용  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents?></p>
+					<p><b>목&nbsp;&nbsp;적  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents_goal?></p>
+                	<p><b>내&nbsp;&nbsp;용  </b>&nbsp;&nbsp;&nbsp;&nbsp;<?=$row->contents?></p>
 					<hr>
                     <br><br>
 

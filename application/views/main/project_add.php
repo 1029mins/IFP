@@ -161,14 +161,14 @@
 				  <div class="form-group">
 					<label for="contents" class="col-sm-2 control-label">OS <span style="color: red; ">*</span></label>
 					<div class="col-sm-10">
-					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_os" value="<?echo set_value('contents_os')?>" placeholder="OS"></input>
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_os" value="<?echo set_value('contents_os')?>" placeholder="Windows / MacOS / Linux /..."></input>
 					</div>
 				  </div>
 
 				  <div class="form-group">
 					<label for="contents" class="col-sm-2 control-label">DBMS <span style="color: red; ">*</span></label>
 					<div class="col-sm-10">
-					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_db" value="<?echo set_value('contents_db')?>" placeholder="DBMS"></input>
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents_db" value="<?echo set_value('contents_db')?>" placeholder="MySQL / Oracle / MS-SQL /..."></input>
 					</div>
 				  </div>
 
@@ -189,7 +189,7 @@
 				  <div class="form-group">
 					<label for="contents" class="col-sm-2 control-label">내 용 <span style="color: red; ">*</span></label>
 					<div class="col-sm-10">
-					  <input type="text" style="float:left; width:100%; resize: none;" name="contents" value="<?echo set_value('contents')?>" placeholder="내 용"></input>
+					  <input type="text" style="float:left; width:100%; resize: none;" name="contents" value="<?echo set_value('contents')?>" placeholder="상세설명 & 기능"></input>
 					</div>
 				  </div>
 
@@ -206,7 +206,7 @@
 				  <div class="form-group">
 					<label for="url" class="col-sm-2 control-label">유튜브 링크</label>
 					<div class="col-sm-10">
-					  <input type="text" style="float:left; width:100%;" name="url" value="<?echo set_value('url')?>" placeholder="youtube">
+					  <input type="text" style="float:left; width:100%;" name="url" value="<?echo set_value('url')?>" placeholder="youtube url">
 					</div>
 				  </div>
 
