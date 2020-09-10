@@ -68,14 +68,13 @@
        $this->load->view("main/board",$data);
        $this->load->view("main/main_footer");
     }
-    public function file()
-    {
-        $uri_array=$this->uri->uri_to_assoc(3);
-        $filename = array_key_exists("name",$uri_array) ? urldecode($uri_array["name"]) : "" ;
-        $data["filename"]=$filename;
-        $this->load->view("main/file",$data);
+    
+
+    public function add(){
+        $data['menu'] = 'none';
+        $this->load->view("main/main_header",$data);
+        $this->load->view("main/board_add");
+        $this->load->view("main/main_footer");
     }
-
-
 }
 ?>

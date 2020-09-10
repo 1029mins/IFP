@@ -14,7 +14,7 @@
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: 김민수, 김수경, 김수진, 김예진, 이지애</li>
+											<li> &copy; 2020-2020. IFP. all rights reserved.</li><li>Develop: 김민수, 김수경, 김수진, 김예진, 이지애</li>
 										</ul>
 									</div>
 

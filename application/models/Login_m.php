@@ -2,7 +2,7 @@
 class Login_m extends CI_Model
 {
    public function login($data){
-         $sql = "SELECT name FROM member WHERE id = '" . $data['id'] . "' AND pwd = '" . $data['pwd'] . "' ";
+         $sql = "SELECT no,name,rank FROM member WHERE id = '" . $data['id'] . "' AND pwd = '" . $data['pwd'] . "' ";
  
         $query = $this -> db -> query($sql);
  

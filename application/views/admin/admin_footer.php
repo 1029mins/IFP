@@ -8,7 +8,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; IFP 2020-2020</span>
+            <span> &copy; 2020-2020. IFP. all rights reserved.</span>
           </div>
         </div>
       </footer>

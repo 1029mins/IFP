@@ -10,6 +10,7 @@
         $this->load->helper(array("url", "date"));
         $this->load->library('upload');
         $this->load->library("pagination");
+        $this->load->helper('alert');
         date_default_timezone_set("Asia/Seoul");
     }
     // 제일 먼저 실행되는 함수
@@ -45,31 +46,39 @@
 		$data["menu"] ='community'; //메인 헤더 메뉴 확인을 위해 필요한 데이터
 
         $this->load->view("main/main_header",$data);
-        $this->load->view("main/docs",$data);
+        if ( $this -> session -> userdata('logged_in') != TRUE) {               
+            $this->load->view("main/login_suggest");
+        }else{
+            $this->load->view("main/docs",$data);
+        }
         $this->load->view("main/main_footer");
     }
     public function view()
     {
-       $uri_array=$this->uri->uri_to_assoc(3);
-       $no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
-       $text1 = array_key_exists("text1",$uri_array) ? urldecode($uri_array["text1"]) : "" ;
-       $page = array_key_exists("page",$uri_array) ? urldecode($uri_array["page"]) : "" ;
-		
-	   $viewcount = "update docs set viewcount=viewcount+1 where no=$no";		//조회수 관련 쿼리
-	   $this->db->query($viewcount);
+        if ( $this -> session -> userdata('logged_in') != TRUE) {
+            alert('로그인 후 사용 가능 합니다.');
+            redirect("/main");                                   
+        }
+        $uri_array=$this->uri->uri_to_assoc(3);
+        $no = array_key_exists("no",$uri_array) ? $uri_array["no"] : "" ;
+        $text1 = array_key_exists("text1",$uri_array) ? urldecode($uri_array["text1"]) : "" ;
+        $page = array_key_exists("page",$uri_array) ? urldecode($uri_array["page"]) : "" ;
+            
+        $viewcount = "update docs set viewcount=viewcount+1 where no=$no";		//조회수 관련 쿼리
+        $this->db->query($viewcount);
 
-       //$this->load->docs("form_validation");
+        //$this->load->docs("form_validation");
 
-       $data["text1"]=$text1;
-       $data["page"]=$page;
+        $data["text1"]=$text1;
+        $data["page"]=$page;
 
-       $data["menu"] ='docs';
-       //if($pic) $data["pic"]=$pic;
+        $data["menu"] ='docs';
+        //if($pic) $data["pic"]=$pic;
 
-       $data["row"] = $this->docs_m->getrow($no);
-       $this->load->view("main/main_header",$data);
-       $this->load->view("main/docs_view",$data);
-       $this->load->view("main/main_footer");
+        $data["row"] = $this->docs_m->getrow($no);
+        $this->load->view("main/main_header",$data);
+        $this->load->view("main/docs_view",$data);
+        $this->load->view("main/main_footer");
     }
     public function file()
     {

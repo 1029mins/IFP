@@ -35,18 +35,22 @@ class Login extends CI_Controller {
 			
 			$data['pwd'] = hash("sha256",$data['pwd']); //해시 암호화
 			$result = $this -> login_m -> login($data);
+			$rank = $result -> rank; 
 
-			if ($result) { //아이디와 비밀번호가 맞는 경우 세션을 생성하기 위해 아이디와 로그인 여부를 배열로 만듬
+			if ($result!= null && $rank != 4) { //아이디와 비밀번호가 맞는 경우 세션을 생성하기 위해 아이디와 로그인 여부를 배열로 만듬
 				$newdata = array(
 					'username' => $result -> name,
+					'userno' => $result -> no,
 					'logged_in' => TRUE
 				);
-
 				$this -> session -> set_userdata($newdata); //배열 newdata로 세션을 생성
-
+			
 				alert('로그인 되었습니다.');
 				exit;
-			} else {
+			} else if($rank == 4){
+				alert('회원가입 승인 대기중입니다. 조금만 기다려주세요!');
+				exit;
+			}else {
 				alert('아이디나 비밀번호를 확인해 주세요.');
 				exit;
 			}

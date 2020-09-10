@@ -32,7 +32,7 @@
         //프로젝트 분류명 읽어오기
         function getlist_kind()
 		{
-			$sql="select * from project_kind order by no";
+			$sql="select name as kind_name,no from project_kind order by no";
 			return $this->db->query($sql)->result();
         } 
         
@@ -40,6 +40,18 @@
         function insertrow($data)
         {
             return $this->db->insert("project",$data);
+        }
+
+        //프로젝트 수정
+        function updaterow( $row, $no )
+        {
+            $where=array( "no"=>$no );
+            return $this->db->update( "project", $row, $where );
+        }
+        //프로젝트 삭제
+        function deleterow($no)  {
+            $sql="delete from project where no=$no";
+            return  $this->db->query($sql);
         }
     }
 ?>

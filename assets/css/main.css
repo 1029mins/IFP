@@ -2028,6 +2028,10 @@ input, select, textarea {
 			cursor: default;
 		}
 
+		#pointer {
+			cursor: pointer !important;
+		}
+
 			.icon.featured:before {
 				font-size: 4.5em;
 				line-height: 1em;
@@ -2453,6 +2457,9 @@ input, select, textarea {
 			#copyright {
 				margin: 0;
 			}
+			
+		/* 메인 main carousel size */
+			.carousel-inner img {height: 1452px; min-width: 100%;}
 
 	}
 
@@ -2912,6 +2919,10 @@ input, select, textarea {
 				padding: 40px 0 20px 0;
 			}
 
+		/* 메인 main carousel size */
+			.carousel-inner img {max-height: 283px; min-width: 100%;}
+
+
 	}
 
 	/*추가 시작 */
@@ -3073,7 +3084,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 		font-size: 13px;
 	}
 	.modal-login .modal-footer a {
-		color: #999;
+		color: #3a3a3a;
 	}
 	.modal-login .avatar {
 		position: absolute;
@@ -3168,7 +3179,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 	}
 
 	button.close {
-		padding: 0 !imporatnt;
+		padding: 0 !important;
 		text-align: right !important;
 		background-color: transparent !important;
 		border: 0 !important;
@@ -3184,5 +3195,35 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 		opacity: .5 !important;
 	}
 /* main login modal 끝 */
+
+/* 메인 main carousel size */
+.carousel-inner img {max-height: 323px; min-width: 100%;}
+
+@media screen and (min-width: 960px) { 
+	.carousel-inner img {max-height: 449px; min-width: 100%;}
+}
+@media screen and (min-width: 744px) and (max-width: 960px) { 
+	.carousel-inner img {max-height: 485px; min-width: 100%;}
+}
+@media screen and (max-width: 407px) { 
+	.carousel-inner img {max-height: 316px; min-width: 100%;}
+}
+
+/* 모바일 css */
+
+@media screen and (max-width: 736px){
+	section#main{
+		padding-top:50px !important;
+	}
+}
+
+/*form*/
+.custom .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+
 
 /*추가 끝*/
